@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         if (bound) {
             try {
-                iCalcService.removeCallback(callback);
+                iCalcService.removeCallback();
                 bound = false;
             } catch (RemoteException e) {
                 e.printStackTrace();
@@ -91,25 +91,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void getAddResult(View view) throws RemoteException {
         if (bound) {
-            result_id.setText(iCalcService.getResult(callback, "ADD"));
+            result_id.setText(iCalcService.getResult("ADD"));
         }
     }
 
     public void getSubResult(View view) throws RemoteException {
         if (bound) {
-            result_id.setText(iCalcService.getResult(callback, "SUB"));
+            result_id.setText(iCalcService.getResult("SUB"));
         }
     }
 
     public void getMulResult(View view) throws RemoteException {
         if (bound) {
-            result_id.setText(iCalcService.getResult(callback, "MUL"));
+            result_id.setText(iCalcService.getResult("MUL"));
         }
     }
 
     public void getDivResult(View view) throws RemoteException {
         if (bound) {
-            result_id.setText(iCalcService.getResult(callback, "DIV"));
+            result_id.setText(iCalcService.getResult("DIV"));
         }
     }
 }

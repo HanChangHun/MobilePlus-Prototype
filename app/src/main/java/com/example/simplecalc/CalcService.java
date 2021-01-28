@@ -16,25 +16,24 @@ public class CalcService extends Service {
     float[] inputs;
     public static final String TAG = "CalcService";
 
+    ICalcServiceCallback mCallback;
     List<ICalcServiceCallback> listeners = new ArrayList<>();
     private Binder binder = new ICalcService.Stub() {
         @Override
         public boolean addCallback(ICalcServiceCallback callback) throws RemoteException {
-            Log.d(TAG, "Add callback : " + callback);
-            listeners.add(callback);
+            mCallback = callback;
             return true;
         }
 
         @Override
-        public boolean removeCallback(ICalcServiceCallback callback) throws RemoteException {
-            Log.d(TAG, "Remove callback : " + callback);
-            listeners.remove(callback);
+        public boolean removeCallback() throws RemoteException {
+            mCallback = null;
             return true;
         }
 
         @Override
-        public String getResult(ICalcServiceCallback callback, String mode) throws RemoteException {
-            float[] inputs = callback.get_inputs();
+        public String getResult(String mode) throws RemoteException {
+            float[] inputs = mCallback.get_inputs();
             if (mode.equals("ADD")) {
                 return Float.toString(inputs[0] + inputs[1]);
             }

@@ -11,11 +11,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ServiceCallbacks {
     private CalcService mService;
     private boolean mBound;
     TextView result_id;
-    float[] inputs;
+    @Override
     public float[] get_inputs(){
         float[] inputs = new float[2];
 
@@ -41,11 +41,12 @@ public class MainActivity extends AppCompatActivity {
             CalcService.MyBinder binder = (CalcService.MyBinder) service;
             mService = binder.getService();
             mBound = true;
+            mService.setCallbacks(MainActivity.this);
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-
+            mBound = false;
         }
     };
 
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         if (mBound) {
+            mService.setCallbacks(null);
             unbindService(mConnection);
             mBound = false;
         }
@@ -68,34 +70,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void getAddResult(View view) {
         if (mBound){
-            inputs = get_inputs();
-            mService.setNum1(inputs[0]);
-            mService.setNum2(inputs[1]);
-            result_id.setText(mService.getAddResult());
+            result_id.setText(mService.getResult("ADD"));
         }
     }
     public void getSubResult(View view) {
         if (mBound){
-            inputs = get_inputs();
-            mService.setNum1(inputs[0]);
-            mService.setNum2(inputs[1]);
-            result_id.setText(mService.getSubResult());
+            result_id.setText(mService.getResult("SUB"));
         }
     }
     public void getMulResult(View view) {
         if (mBound){
-            inputs = get_inputs();
-            mService.setNum1(inputs[0]);
-            mService.setNum2(inputs[1]);
-            result_id.setText(mService.getMulResult());
+            result_id.setText(mService.getResult("MUL"));
         }
     }
     public void getDivResult(View view) {
         if (mBound){
-            inputs = get_inputs();
-            mService.setNum1(inputs[0]);
-            mService.setNum2(inputs[1]);
-            result_id.setText(mService.getDivResult());
+            result_id.setText(mService.getResult("DIV"));
         }
     }
 }

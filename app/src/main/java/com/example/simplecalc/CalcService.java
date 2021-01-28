@@ -6,17 +6,8 @@ import android.os.Binder;
 import android.os.IBinder;
 
 public class CalcService extends Service {
-    private float num1,num2;
-
-    public void setNum1(float num1) {
-        this.num1 = num1;
-    }
-
-    public void setNum2(float num2) {
-        this.num2 = num2;
-    }
-
     private IBinder mBinder = new MyBinder();
+    private ServiceCallbacks serviceCallbacks;
 
     public class MyBinder extends Binder {
         public CalcService getService(){
@@ -32,19 +23,26 @@ public class CalcService extends Service {
         return mBinder;
     }
 
-    public String getAddResult(){
-        return Float.toString(num1+num2);
+    public String getResult(String mode){
+        float[] inputs = serviceCallbacks.get_inputs();
+        if (mode.equals("ADD")) {
+            return Float.toString(inputs[0] + inputs[1]);
+        }
+        else if (mode.equals("SUB")){
+            return Float.toString(inputs[0] - inputs[1]);
+        }
+        else if (mode.equals("MUL")){
+            return Float.toString(inputs[0] * inputs[1]);
+        }
+        else if (mode.equals("DIV")){
+            return Float.toString(inputs[0] / inputs[1]);
+        }
+        else {
+            return null;
+        }
     }
 
-    public String getSubResult() {
-        return Float.toString(num1-num2);
-    }
-
-    public String getMulResult() {
-        return Float.toString(num1*num2);
-    }
-
-    public String getDivResult() {
-        return Float.toString(num1/num2);
+    public void setCallbacks(ServiceCallbacks callbacks) {
+        serviceCallbacks = callbacks;
     }
 }

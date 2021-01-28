@@ -25,23 +25,24 @@
         android:layout_height="45dp"
         android:layout_marginTop="80dp"
         android:ems="10"
-        android:hint="@string/num1"
+        android:hint="@string/input1"
         app:layout_constraintEnd_toStartOf="@+id/result_id"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result_id" />
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/input2_id"
         android:layout_width="100dp"
         android:layout_height="47dp"
         android:layout_marginTop="80dp"
-        android:autofillHints="@string/input2"
         android:ems="10"
         android:inputType="phone"
-        android:hint="@string/num2"
+        android:hint="@string/input2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/result_id"
-        app:layout_constraintTop_toBottomOf="@+id/result_id" />
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/add_btn_id"
@@ -49,22 +50,21 @@
         android:layout_height="40dp"
         android:layout_marginTop="240dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:text="@string/add"
         app:layout_constraintEnd_toStartOf="@+id/sub_btn_id"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result_id"
-        android:onClick="getAddResult"/>
+        android:onClick="getAddResult"
+        android:layout_marginRight="10dp" />
+
 
     <Button
         android:id="@+id/sub_btn_id"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="240dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
         android:text="@string/sub"
         app:layout_constraintEnd_toStartOf="@+id/mul_btn_id"
         app:layout_constraintStart_toEndOf="@+id/add_btn_id"
@@ -77,11 +77,9 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="240dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:text="@string/times"
+        android:text="@string/mul"
         app:layout_constraintEnd_toStartOf="@+id/div_btn_id"
         app:layout_constraintStart_toEndOf="@+id/sub_btn_id"
         app:layout_constraintTop_toBottomOf="@+id/result_id"
@@ -93,13 +91,13 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="240dp"
-        android:text="@string/devide"
+        android:text="@string/div"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mul_btn_id"
         app:layout_constraintTop_toBottomOf="@+id/result_id"
-        android:onClick="getDivResult"/>
+        android:onClick="getDivResult"
+        android:layout_marginLeft="10dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

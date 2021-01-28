@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SimpleCalc</string>
-    <string name="devide">/</string>
-    <string name="times">*</string>
+    <string name="div">/</string>
+    <string name="mul">*</string>
     <string name="sub">-</string>
     <string name="add">+</string>
     <string name="input2">Input2</string>

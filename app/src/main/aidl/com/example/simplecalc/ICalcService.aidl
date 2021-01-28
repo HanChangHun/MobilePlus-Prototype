@@ -1,13 +1,8 @@
-// ICalcService.aidl
 package com.example.simplecalc;
-
-// Declare any non-default types here with import statements
+import com.example.simplecalc.ICalcServiceCallback;
 
 interface ICalcService {
-    /**
-     * Demonstrates some basic types that you can use as parameters
-     * and return values in AIDL.
-     */
-    void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
-            double aDouble, String aString);
+    boolean addCallback(ICalcServiceCallback callback);
+    boolean removeCallback(ICalcServiceCallback callback);
+    String getResult(ICalcServiceCallback callback, String mode);
 }

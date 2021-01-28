@@ -1,13 +1,12 @@
 <resources>
     <string name="app_name">SimpleCalc</string>
-    <string name="div">/</string>
-    <string name="mul">*</string>
-    <string name="sub">-</string>
-    <string name="add">+</string>
-    <string name="input2">Input2</string>
-    <string name="textview">TextView</string>
     <string name="_0">0</string>
     <string name="input1">Input1</string>
+    <string name="input2">Input2</string>
     <string name="num1">num1</string>
     <string name="num2">num2</string>
+    <string name="add">+</string>
+    <string name="sub">-</string>
+    <string name="mul">*</string>
+    <string name="div">/</string>
 </resources>

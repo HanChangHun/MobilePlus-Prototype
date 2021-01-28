@@ -7,12 +7,97 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/result_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/_0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <EditText
+        android:id="@+id/input1_id"
+        android:inputType="phone"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="@string/input1"
+        app:layout_constraintEnd_toStartOf="@+id/result_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/input2_id"
+        android:layout_width="100dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="@string/input2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/result_id"
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/add_btn_id"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/add"
+        app:layout_constraintEnd_toStartOf="@+id/sub_btn_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:onClick="getAddResult"
+        android:layout_marginRight="10dp" />
+
+
+    <Button
+        android:id="@+id/sub_btn_id"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/sub"
+        app:layout_constraintEnd_toStartOf="@+id/mul_btn_id"
+        app:layout_constraintStart_toEndOf="@+id/add_btn_id"
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:onClick="getSubResult"/>
+
+
+    <Button
+        android:id="@+id/mul_btn_id"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/mul"
+        app:layout_constraintEnd_toStartOf="@+id/div_btn_id"
+        app:layout_constraintStart_toEndOf="@+id/sub_btn_id"
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:onClick="getMulResult"/>
+
+
+    <Button
+        android:id="@+id/div_btn_id"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="240dp"
+        android:text="@string/div"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mul_btn_id"
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:onClick="getDivResult"
+        android:layout_marginLeft="10dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

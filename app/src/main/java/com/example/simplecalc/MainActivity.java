@@ -2,17 +2,20 @@ package com.example.simplecalc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
-import android.net.Uri;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    private CalcService mService;
+    private boolean mBound;
+    TextView result_id;
+    float[] inputs;
     public float[] get_inputs(){
         float[] inputs = new float[2];
 
@@ -29,42 +32,70 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView result_id;
         result_id = findViewById(R.id.result_id);
     }
 
-    public void add_fun(View view) {
-        float[] inputs = get_inputs();
-        Intent intent = new Intent(this, CalcIntentService.class);
-        intent.setAction("ADD");
-        intent.putExtra("num1", inputs[0]);
-        intent.putExtra("num2", inputs[1]);
-        startService(intent);
-    }
-    public void sub_fun(View view) {
-        float[] inputs = get_inputs();
-        Intent intent = new Intent(this, CalcIntentService.class);
-        intent.setAction("SUB");
-        intent.putExtra("num1", inputs[0]);
-        intent.putExtra("num2", inputs[1]);
-        startService(intent);
-    }
-    public void mul_fun(View view) {
-        float[] inputs = get_inputs();
-        Intent intent = new Intent(this, CalcIntentService.class);
-        intent.setAction("MUL");
-        intent.putExtra("num1", inputs[0]);
-        intent.putExtra("num2", inputs[1]);
-        startService(intent);
-    }
-    public void div_fun(View view) {
-        float[] inputs = get_inputs();
-        Intent intent = new Intent(this, CalcIntentService.class);
-        intent.setAction("DIV");
-        intent.putExtra("num1", inputs[0]);
-        intent.putExtra("num2", inputs[1]);
-        startService(intent);
+    private ServiceConnection mConnection = new ServiceConnection() {
+        @Override
+        public void onServiceConnected(ComponentName name, IBinder service) {
+            CalcService.MyBinder binder = (CalcService.MyBinder) service;
+            mService = binder.getService();
+            mBound = true;
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName name) {
+
+        }
+    };
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        Intent intent = new Intent(this, CalcService.class);
+        bindService(intent, mConnection, BIND_AUTO_CREATE);
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mBound) {
+            unbindService(mConnection);
+            mBound = false;
+        }
+    }
 
+    public void getAddResult(View view) {
+        if (mBound){
+            inputs = get_inputs();
+            mService.setNum1(inputs[0]);
+            mService.setNum2(inputs[1]);
+            result_id.setText(mService.getAddResult());
+        }
+    }
+    public void getSubResult(View view) {
+        if (mBound){
+            inputs = get_inputs();
+            mService.setNum1(inputs[0]);
+            mService.setNum2(inputs[1]);
+            result_id.setText(mService.getSubResult());
+        }
+    }
+    public void getMulResult(View view) {
+        if (mBound){
+            inputs = get_inputs();
+            mService.setNum1(inputs[0]);
+            mService.setNum2(inputs[1]);
+            result_id.setText(mService.getMulResult());
+        }
+    }
+    public void getDivResult(View view) {
+        if (mBound){
+            inputs = get_inputs();
+            mService.setNum1(inputs[0]);
+            mService.setNum2(inputs[1]);
+            result_id.setText(mService.getDivResult());
+        }
+    }
 }

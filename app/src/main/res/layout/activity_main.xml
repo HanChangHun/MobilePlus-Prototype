@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toStartOf="@+id/sub_btn_id"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result_id"
-        android:onClick="add_fun"/>
+        android:onClick="getAddResult"/>
 
     <Button
         android:id="@+id/sub_btn_id"
@@ -69,7 +69,7 @@
         app:layout_constraintEnd_toStartOf="@+id/mul_btn_id"
         app:layout_constraintStart_toEndOf="@+id/add_btn_id"
         app:layout_constraintTop_toBottomOf="@+id/result_id"
-        android:onClick="sub_fun"/>
+        android:onClick="getSubResult"/>
 
 
     <Button
@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toStartOf="@+id/div_btn_id"
         app:layout_constraintStart_toEndOf="@+id/sub_btn_id"
         app:layout_constraintTop_toBottomOf="@+id/result_id"
-        android:onClick="mul_fun"/>
+        android:onClick="getMulResult"/>
 
 
     <Button
@@ -99,7 +99,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mul_btn_id"
         app:layout_constraintTop_toBottomOf="@+id/result_id"
-        android:onClick="div_fun"/>
+        android:onClick="getDivResult"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

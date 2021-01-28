@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleCalc">
         <service
-            android:name=".CalcIntentService"
-            android:exported="false"></service>
+            android:name=".CalcService"
+            android:enabled="true"
+            android:exported="true"></service>
 
         <activity android:name=".MainActivity">
             <intent-filter>

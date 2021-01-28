@@ -20,12 +20,12 @@
 
     <EditText
         android:id="@+id/input1_id"
+        android:inputType="phone"
         android:layout_width="100dp"
         android:layout_height="45dp"
         android:layout_marginTop="80dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/input1"
+        android:hint="@string/num1"
         app:layout_constraintEnd_toStartOf="@+id/result_id"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/result_id" />
@@ -37,8 +37,8 @@
         android:layout_marginTop="80dp"
         android:autofillHints="@string/input2"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/input2"
+        android:inputType="phone"
+        android:hint="@string/num2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/result_id"
         app:layout_constraintTop_toBottomOf="@+id/result_id" />
@@ -53,7 +53,8 @@
         android:text="@string/add"
         app:layout_constraintEnd_toStartOf="@+id/sub_btn_id"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result_id" />
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:onClick="add_fun"/>
 
     <Button
         android:id="@+id/sub_btn_id"
@@ -67,7 +68,9 @@
         android:text="@string/sub"
         app:layout_constraintEnd_toStartOf="@+id/mul_btn_id"
         app:layout_constraintStart_toEndOf="@+id/add_btn_id"
-        app:layout_constraintTop_toBottomOf="@+id/result_id" />
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:onClick="sub_fun"/>
+
 
     <Button
         android:id="@+id/mul_btn_id"
@@ -81,7 +84,9 @@
         android:text="@string/times"
         app:layout_constraintEnd_toStartOf="@+id/div_btn_id"
         app:layout_constraintStart_toEndOf="@+id/sub_btn_id"
-        app:layout_constraintTop_toBottomOf="@+id/result_id" />
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:onClick="mul_fun"/>
+
 
     <Button
         android:id="@+id/div_btn_id"
@@ -93,6 +98,8 @@
         android:text="@string/devide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/mul_btn_id"
-        app:layout_constraintTop_toBottomOf="@+id/result_id" />
+        app:layout_constraintTop_toBottomOf="@+id/result_id"
+        android:onClick="div_fun"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,12 +6,11 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.os.RemoteException;
 
-import com.example.aidllib.ICalcService;
+import com.example.aidlserver.ICalcService;
 
 public class MyService extends Service {
 
     private Binder binder = new ICalcService.Stub(){
-
         @Override
         public String getResult(float inputs1, float inputs2, String mode) throws RemoteException {
             if (mode.equals("ADD")) {

@@ -13,7 +13,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/aidlclient" />
-            <option value="$PROJECT_DIR$/aidllib" />
             <option value="$PROJECT_DIR$/aidlserver" />
           </set>
         </option>

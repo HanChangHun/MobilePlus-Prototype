@@ -1,5 +1,5 @@
 // ICalcService.aidl
-package com.example.aidllib;
+package com.example.aidlserver;
 
 // Declare any non-default types here with import statements
 

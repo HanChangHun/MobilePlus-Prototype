@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.aidllib.ICalcService;
+import com.example.aidlserver.ICalcService;
 
 public class MainActivity extends AppCompatActivity {
     TextView result_id;

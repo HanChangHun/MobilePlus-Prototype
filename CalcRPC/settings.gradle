@@ -1,0 +1,4 @@
+include ':aidllib'
+include ':aidlserver'
+include ':aidlclient'
+rootProject.name = "InterProcessRPC"

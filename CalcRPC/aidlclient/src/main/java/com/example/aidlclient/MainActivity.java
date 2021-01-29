@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.aidlserver.ICalcService;
+import com.example.aidlserver.ICalcServiceCallback;
 
 public class MainActivity extends AppCompatActivity {
     TextView result_id;
@@ -21,26 +22,35 @@ public class MainActivity extends AppCompatActivity {
     private ICalcService iCalcService;
     private boolean bound = false;
 
-    public float[] get_inputs() {
-        float[] inputs = new float[2];
+    private ICalcServiceCallback callback = new ICalcServiceCallback.Stub() {
+        @Override
+        public float[] get_inputs() {
+            float[] inputs = new float[2];
 
-        EditText input1_id = findViewById(R.id.input1_id);
-        EditText input2_id = findViewById(R.id.input2_id);
-        inputs[0] = Float.parseFloat(String.valueOf(input1_id.getText()));
-        inputs[1] = Float.parseFloat(String.valueOf(input2_id.getText()));
+            EditText input1_id = findViewById(R.id.input1_id);
+            EditText input2_id = findViewById(R.id.input2_id);
+            inputs[0] = Float.parseFloat(String.valueOf(input1_id.getText()));
+            inputs[1] = Float.parseFloat(String.valueOf(input2_id.getText()));
 
-        return inputs;
-    }
+            return inputs;
+        }
+    };
 
     private ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             iCalcService = ICalcService.Stub.asInterface(service);
+            try {
+                iCalcService.addCallback(callback);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
             iCalcService = null;
+            bound = false;
         }
     };
 
@@ -66,7 +76,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         if (bound) {
-            bound = false;
+            try {
+                iCalcService.removeCallback();
+                bound = false;
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
             unbindService(connection);
         }
     }
@@ -74,28 +89,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void getAddResult(View view) throws RemoteException {
         if (bound) {
-            float[] inputs = get_inputs();
-            result_id.setText(iCalcService.getResult(inputs[0], inputs[1], "ADD"));
+            result_id.setText(iCalcService.getResult("ADD"));
         }
     }
+
     public void getSubResult(View view) throws RemoteException {
         if (bound) {
-            float[] inputs = get_inputs();
-            result_id.setText(iCalcService.getResult(inputs[0], inputs[1], "SUB"));
+            result_id.setText(iCalcService.getResult("SUB"));
         }
     }
 
     public void getMulResult(View view) throws RemoteException {
         if (bound) {
-            float[] inputs = get_inputs();
-            result_id.setText(iCalcService.getResult(inputs[0], inputs[1], "MUL"));
+            result_id.setText(iCalcService.getResult("MUL"));
         }
     }
 
     public void getDivResult(View view) throws RemoteException {
         if (bound) {
-            float[] inputs = get_inputs();
-            result_id.setText(iCalcService.getResult(inputs[0], inputs[1], "DIV"));
+            result_id.setText(iCalcService.getResult("DIV"));
         }
     }
 }

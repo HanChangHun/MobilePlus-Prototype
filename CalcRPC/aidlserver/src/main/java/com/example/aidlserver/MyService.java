@@ -32,6 +32,9 @@ public class MyService extends Service {
         @Override
         public String getResult(String mode) throws RemoteException {
             float[] inputs = mCallback.get_inputs();
+            if (inputs == null){
+                return "Check Inputs";
+            }
             if (mode.equals("ADD")) {
                 return Float.toString(inputs[0] + inputs[1]);
             } else if (mode.equals("SUB")) {
@@ -41,11 +44,10 @@ public class MyService extends Service {
             } else if (mode.equals("DIV")) {
                 return Float.toString(inputs[0] / inputs[1]);
             } else {
-                return null;
+                return "Error!";
             }
         }
     };
-
 
     @Override
     public IBinder onBind(Intent intent) {

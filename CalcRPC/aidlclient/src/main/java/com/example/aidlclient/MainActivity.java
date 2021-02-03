@@ -12,6 +12,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -69,6 +70,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         result_id = findViewById(R.id.result_id);
+
+        Button bindButton = (Button)findViewById(R.id.bind_btn);
+        bindButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!bound) {
+                    Intent intent = new Intent("com.example.aidlserver.MY_SERVICE");
+                    intent.setPackage("com.example.aidlserver");
+                    bindService(intent, connection, Context.BIND_AUTO_CREATE);
+                }
+            }
+        });
+        Button unbindButton = (Button)findViewById(R.id.unbind_btn);
+        unbindButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (bound) {
+                    unbindService(connection);
+                    bound = false;
+                    try {
+                        iCalcService.removeCallback();
+
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        });
     }
 
     @Override

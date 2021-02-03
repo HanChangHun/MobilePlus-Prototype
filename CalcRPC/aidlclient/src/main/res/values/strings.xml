@@ -9,4 +9,6 @@
     <string name="sub">-</string>
     <string name="mul">*</string>
     <string name="div">/</string>
+    <string name="bind">Bind</string>
+    <string name="unbind">Unbind</string>
 </resources>

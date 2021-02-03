@@ -99,5 +99,29 @@
         android:onClick="getDivResult"
         android:layout_marginLeft="10dp" />
 
+    <Button
+        android:id="@+id/bind_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/bind"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/unbind_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_btn_id" />
+
+    <Button
+        android:id="@+id/unbind_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/unbind"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bind_btn"
+        app:layout_constraintTop_toBottomOf="@+id/mul_btn_id" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

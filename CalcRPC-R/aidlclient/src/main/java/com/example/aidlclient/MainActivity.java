@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private final ICalcServiceCallback callback = new ICalcServiceCallback.Stub() {
         @Override
         public float[] get_inputs() {
+            Log.d(TAG, "get_inputs: Called");
             float[] inputs = new float[2];
 
             EditText input1_id = findViewById(R.id.input1_id);
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
+            Log.d(TAG, "onServiceDisconnected: Called");
             iCalcService = null;
             bound = false;
         }
@@ -78,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!bound) {
-                    Intent intent = new Intent("com.example.aidlserver.MY_SERVICE");
-                    intent.setPackage("com.example.aidlserver");
+                    Intent intent = new Intent().setClassName("com.example.aidlserver",
+                            "com.example.aidlserver.CalcService");
                     boolean isBind = bindService(intent, connection, Context.BIND_AUTO_CREATE);
                     Log.d(TAG, "isBind: " + isBind);
                 }
@@ -128,22 +130,34 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void getAddResult(View view) throws RemoteException {
-        if (bound) result_id.setText(iCalcService.getResult("ADD"));
+        Log.d(TAG, "getAddResult: Called");
+        if (bound) {
+            result_id.setText(iCalcService.getResult("ADD"));
+        }
         else result_id.setText(no_service);
     }
 
     public void getSubResult(View view) throws RemoteException {
-        if (bound) result_id.setText(iCalcService.getResult("SUB"));
+        Log.d(TAG, "getSubResult: Called");
+        if (bound) {
+            result_id.setText(iCalcService.getResult("SUB"));
+        }
         else result_id.setText(no_service);
     }
 
     public void getMulResult(View view) throws RemoteException {
-        if (bound) result_id.setText(iCalcService.getResult("MUL"));
+        Log.d(TAG, "getMulResult: Called");
+        if (bound) {
+            result_id.setText(iCalcService.getResult("MUL"));
+        }
         else result_id.setText(no_service);
     }
 
     public void getDivResult(View view) throws RemoteException {
-        if (bound) result_id.setText(iCalcService.getResult("DIV"));
+        Log.d(TAG, "getDivResult: Called");
+        if (bound) {
+            result_id.setText(iCalcService.getResult("DIV"));
+        }
         else result_id.setText(no_service);
     }
 }

@@ -1,0 +1,361 @@
+--------- beginning of kernel
+--------- beginning of main
+--------- beginning of system
+02-19 17:58:05.595   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.595   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@99fe249
+02-19 17:58:05.610   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.610   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@14c460c
+02-19 17:58:05.627   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.627   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@7268088
+02-19 17:58:05.648   496   597 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.648   496   597 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@f0a871
+02-19 17:58:05.650   496   518 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.650   496   518 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@2cbda2e
+02-19 17:58:05.682   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.682   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@e56d6f2
+02-19 17:58:05.739   496   516 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.739   496   516 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@2f7fa17
+02-19 17:58:05.807   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.807   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@5aa4b2a
+02-19 17:58:05.932   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.932   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@bd092cb
+02-19 17:58:05.934   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.934   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@7824531
+02-19 17:58:05.996   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:05.996   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@ba2443b
+02-19 17:58:06.230   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:06.230   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@fad9d92
+02-19 17:58:06.247   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:06.247   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@1ed5da8
+02-19 17:58:06.870   763   763 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@68e3cc5
+02-19 17:58:06.870   763   763 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@36b854b
+02-19 17:58:06.876   763   763 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@68e3cc5
+02-19 17:58:06.876   763   763 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@36b854b
+02-19 17:58:07.175   627   627 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.175   627   627 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@bf2a0d9
+02-19 17:58:07.177   627   627 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.177   627   627 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@a74997f
+02-19 17:58:07.178   627   627 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.178   627   627 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@2637195
+02-19 17:58:07.179   627   627 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.179   627   627 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@b434e9b
+02-19 17:58:07.179   627   627 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.180   627   627 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@3d69211
+02-19 17:58:07.181   627   627 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.181   627   627 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@b7e3977
+02-19 17:58:07.187   496   518 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:07.187   496   518 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@2cbda2e
+02-19 17:58:07.203   644   644 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@669276c
+02-19 17:58:07.203   644   644 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@80c573b
+02-19 17:58:07.231   763   763 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@68e3cc5
+02-19 17:58:07.231   763   763 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@2a47d7
+02-19 17:58:07.276   763   763 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@68e3cc5
+02-19 17:58:07.276   763   763 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@7292d30
+02-19 17:58:07.330   496   518 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:07.330   496   518 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@8267f5
+02-19 17:58:07.330   627   664 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.330   627   664 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@b434e9b
+02-19 17:58:07.330   627   652 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.331   627   652 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@2637195
+02-19 17:58:07.331   627   643 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.331   627   643 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@a74997f
+02-19 17:58:07.331   627   652 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.331   627   652 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@b7e3977
+02-19 17:58:07.331   627   664 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.332   627   664 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@bf2a0d9
+02-19 17:58:07.332   627   643 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.332   627   643 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@3d69211
+02-19 17:58:07.373   627   627 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:07.373   627   627 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@6b85a27
+02-19 17:58:08.456   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:08.456   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@dba9d22
+02-19 17:58:09.023   496   820 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:09.023   496   820 D 201521037: Binder: onTransact: 1: INTERFACE_TRANSACTION: 1598968902
+02-19 17:58:09.145   496   951 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:09.145   496   951 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@5dfaf20
+02-19 17:58:09.522   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:09.522   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@e718ad8
+02-19 17:58:09.551   627   947 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:09.551   627   947 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@ba829e1
+02-19 17:58:09.556   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:09.556   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@e4c087f
+02-19 17:58:09.653   644   644 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@669276c
+02-19 17:58:09.653   644   644 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@fe7bd32
+02-19 17:58:09.736   496   573 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:09.736   496   573 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@c3182da
+02-19 17:58:09.809   496   524 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:09.809   496   524 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@386e28e
+02-19 17:58:09.861   627   627 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@c063e23
+02-19 17:58:09.861   627   627 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@57b3420
+02-19 17:58:10.556   763   763 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@68e3cc5
+02-19 17:58:10.556   763   763 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@65d9a12
+02-19 17:58:10.607   496   524 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:10.607   496   524 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@ef311f1
+02-19 17:58:11.146   496   594 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:11.146   496   594 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@b5b302f
+02-19 17:58:11.574   496  1268 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:11.574   496  1268 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@d35d2d7
+02-19 17:58:11.692   496  1268 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:11.692   496  1268 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@4b75ec1
+02-19 17:58:11.699   763   763 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@68e3cc5
+02-19 17:58:11.699   763   763 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@32f3b55
+02-19 17:58:12.089   496   929 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:12.090   496   929 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@ac97747
+02-19 17:58:12.190   496  1258 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:12.190   496  1258 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@1a14a96
+02-19 17:58:12.914   496  1252 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:12.914   496  1252 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@273f71e
+02-19 17:58:13.679   496  1268 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:13.679   496  1268 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:58:13.680   496  1268 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@3f6c16e}
+02-19 17:58:13.682   496  1268 D 201521037: Binder: onTransact: 8
+02-19 17:58:13.682   496  1268 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@814100f
+02-19 17:58:15.133   496  1127 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:15.133   496  1127 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:58:15.133   496  1127 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@f594fc}
+02-19 17:58:15.133   496  1127 D 201521037: Binder: onTransact: 8
+02-19 17:58:15.134   496  1127 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@2dd6785
+02-19 17:58:16.197   496  1127 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:16.197   496  1127 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:58:16.197   496  1127 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@1a6023d}
+02-19 17:58:16.207   496  1127 D 201521037: Binder: onTransact: 8
+02-19 17:58:16.207   496  1127 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@a37477e
+02-19 17:58:34.940   496   518 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:34.940   496   518 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@e7b2f63
+02-19 17:58:44.449   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:44.449   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:58:44.449   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@1da4d8d}
+02-19 17:58:44.451   496  1284 D 201521037: Binder: onTransact: 8
+02-19 17:58:44.451   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@5a22b42
+02-19 17:58:44.506   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:44.506   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:58:44.506   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@ade09a}
+02-19 17:58:44.507   496  1284 D 201521037: Binder: onTransact: 8
+02-19 17:58:44.507   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@5a22b42
+02-19 17:58:44.588   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:44.588   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:58:44.589   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@3f96c66}
+02-19 17:58:44.589   496  1284 D 201521037: Binder: onTransact: 8
+02-19 17:58:44.589   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@a37477e
+02-19 17:58:44.627   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:44.627   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:58:44.627   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@51fe8f2}
+02-19 17:58:44.629   496  1284 D 201521037: Binder: onTransact: 8
+02-19 17:58:44.629   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@5a22b42
+02-19 17:58:44.637   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:44.637   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:58:44.638   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@af3afbb}
+02-19 17:58:44.648   496  1284 D 201521037: Binder: onTransact: 8
+02-19 17:58:44.649   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@5a22b42
+02-19 17:58:44.659   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:44.659   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:58:44.659   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@f91966d}
+02-19 17:58:44.720   496  1284 D 201521037: Binder: onTransact: 8
+02-19 17:58:44.720   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@a37477e
+02-19 17:58:44.732   496   516 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:58:44.732   496   516 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@64d60b9
+02-19 17:58:44.807   496  1268 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:58:44.807   496  1268 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:58:44.808   496  1268 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@26a1d2f}
+02-19 17:58:44.819   496  1268 D 201521037: Binder: onTransact: 8
+02-19 17:58:44.819   496  1268 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@a37477e
+02-19 17:58:45.117  1915  1915 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@9ab7354
+02-19 17:58:45.117  1915  1915 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@1b6ebf2
+02-19 17:58:45.328  1915  1915 D 201521037: MainActivity: onServiceConnected: 1
+02-19 17:58:45.329  1915  1915 D 201521037: onServiceConnected: iCalcServicecom.example.aidlserver.ICalcService$Stub$Proxy@7fd7fb9
+02-19 17:58:54.851  1915  1915 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@9ab7354
+02-19 17:58:54.851  1915  1915 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@e6f1aa4
+02-19 17:58:54.857  1915  1915 D 201521037: isBind: true
+02-19 17:58:54.868  1915  1915 D 201521037: MainActivity: onServiceConnected: 1
+02-19 17:58:54.868  1915  1915 D 201521037: onServiceConnected: iCalcServicecom.example.aidlserver.ICalcService$Stub$Proxy@93cabc2
+02-19 17:59:01.569   496   594 D 201521037: Binder: onTransact: 0: start!!
+02-19 17:59:01.569   496   594 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 17:59:01.570   496   594 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@4f1379f}
+02-19 17:59:01.618   496   594 D 201521037: Binder: onTransact: 8
+02-19 17:59:01.618   496   594 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@5a22b42
+02-19 17:59:05.543   496   516 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:59:05.543   496   516 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@47f1623
+02-19 17:59:11.491   496   496 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 17:59:11.492   496   496 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@1dd81cf
+02-19 18:02:19.596   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:02:19.596   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:02:19.597   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@21135a5}
+02-19 18:02:19.599   496  1284 D 201521037: Binder: onTransact: 8
+02-19 18:02:19.599   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@24a4d7a
+02-19 18:02:19.633   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:02:19.633   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:02:19.634   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@69fc746}
+02-19 18:02:19.634   496  1284 D 201521037: Binder: onTransact: 8
+02-19 18:02:19.634   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@6e35d07
+02-19 18:02:19.659   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:02:19.659   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:02:19.659   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@6cec2a3}
+02-19 18:02:19.660   496  1284 D 201521037: Binder: onTransact: 8
+02-19 18:02:19.660   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@24a4d7a
+02-19 18:02:19.722   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:02:19.722   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:02:19.722   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@680e5ff}
+02-19 18:02:19.723   496  1284 D 201521037: Binder: onTransact: 8
+02-19 18:02:19.723   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@6e35d07
+02-19 18:02:19.729   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:02:19.729   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:02:19.730   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@5701cb8}
+02-19 18:02:19.736   496  1284 D 201521037: Binder: onTransact: 8
+02-19 18:02:19.736   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@6e35d07
+02-19 18:02:19.742   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:02:19.742   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:02:19.742   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@c0d9382}
+02-19 18:02:19.790   496  1284 D 201521037: Binder: onTransact: 8
+02-19 18:02:19.790   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@24a4d7a
+02-19 18:02:19.867   496  1977 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:02:19.867   496  1977 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:02:19.867   496  1977 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@9e6dbd8}
+02-19 18:02:19.887   496  1977 D 201521037: Binder: onTransact: 8
+02-19 18:02:19.887   496  1977 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@e0159a2
+02-19 18:02:19.913   496   516 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 18:02:19.913   496   516 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@ed94df0
+02-19 18:02:20.206  2040  2040 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@9ab7354
+02-19 18:02:20.206  2040  2040 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@1b6ebf2
+02-19 18:02:20.219  2040  2040 D 201521037: MainActivity: onServiceConnected: 1
+02-19 18:02:20.220  2040  2040 D 201521037: onServiceConnected: iCalcServicecom.example.aidlserver.ICalcService$Stub$Proxy@4d974b5
+02-19 18:02:29.255  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:29.697  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:30.118  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:30.510  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:34.336  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:34.836  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:35.335  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:35.752  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:39.449  2040  2040 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@9ab7354
+02-19 18:02:39.449  2040  2040 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@7158a6c
+02-19 18:02:39.455  2040  2040 D 201521037: isBind: true
+02-19 18:02:39.460  2040  2040 D 201521037: MainActivity: onServiceConnected: 1
+02-19 18:02:39.461  2040  2040 D 201521037: onServiceConnected: iCalcServicecom.example.aidlserver.ICalcService$Stub$Proxy@14ed4ca
+02-19 18:02:39.912  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:40.217  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:40.636  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:41.078  2040  2040 D 201521037: get_inputs: Called
+02-19 18:02:48.850   496  1977 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:02:48.850   496  1977 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:02:48.851   496  1977 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@c5d0110}
+02-19 18:02:48.867   496  1977 D 201521037: Binder: onTransact: 8
+02-19 18:02:48.867   496  1977 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@e0159a2
+02-19 18:03:47.249   496  1899 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:03:47.249   496  1899 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:03:47.249   496  1899 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@96897c7}
+02-19 18:03:47.251   496  1899 D 201521037: Binder: onTransact: 8
+02-19 18:03:47.251   496  1899 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@ab171f4
+02-19 18:03:47.286   496  1899 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:03:47.286   496  1899 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:03:47.286   496  1899 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@76db960}
+02-19 18:03:47.287   496  1899 D 201521037: Binder: onTransact: 8
+02-19 18:03:47.287   496  1899 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@8735e19
+02-19 18:03:47.309   496  1899 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:03:47.309   496  1899 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:03:47.309   496  1899 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@452c2d5}
+02-19 18:03:47.309   496  1899 D 201521037: Binder: onTransact: 8
+02-19 18:03:47.309   496  1899 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@ab171f4
+02-19 18:03:47.388   496  1899 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:03:47.388   496  1899 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:03:47.388   496  1899 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@589b751}
+02-19 18:03:47.389   496  1899 D 201521037: Binder: onTransact: 8
+02-19 18:03:47.389   496  1899 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@8735e19
+02-19 18:03:47.396   496  1899 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:03:47.396   496  1899 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:03:47.396   496  1899 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@ffb0d42}
+02-19 18:03:47.403   496  1899 D 201521037: Binder: onTransact: 8
+02-19 18:03:47.403   496  1899 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@8735e19
+02-19 18:03:47.409   496  1899 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:03:47.409   496  1899 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:03:47.409   496  1899 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@9886fbc}
+02-19 18:03:47.474   496  1899 D 201521037: Binder: onTransact: 8
+02-19 18:03:47.474   496  1899 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@ab171f4
+02-19 18:03:47.543   496   516 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 18:03:47.543   496   516 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@448b398
+02-19 18:03:47.567   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:03:47.567   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:03:47.567   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@22e7912}
+02-19 18:03:47.572   496  1284 D 201521037: Binder: onTransact: 8
+02-19 18:03:47.572   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@bf7145e
+02-19 18:03:47.876  2122  2122 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@9ab7354
+02-19 18:03:47.877  2122  2122 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@1b6ebf2
+02-19 18:03:47.888  2122  2122 D 201521037: MainActivity: onServiceConnected: 1
+02-19 18:03:47.889  2122  2122 D 201521037: onServiceConnected: iCalcServicecom.example.aidlserver.ICalcService$Stub$Proxy@4d974b5
+02-19 18:04:03.243   496  1284 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:04:03.243   496  1284 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:04:03.243   496  1284 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@92873f7}
+02-19 18:04:03.281   496  1284 D 201521037: Binder: onTransact: 8
+02-19 18:04:03.281   496  1284 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@e0159a2
+02-19 18:04:06.631   496  1127 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:04:06.632   496  1127 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:04:06.632   496  1127 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@b724cf5}
+02-19 18:04:06.633   496  1127 D 201521037: Binder: onTransact: 8
+02-19 18:04:06.633   496  1127 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@e0159a2
+02-19 18:04:06.668   496  1127 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:04:06.668   496  1127 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:04:06.668   496  1127 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@c9552c4}
+02-19 18:04:06.669   496  1127 D 201521037: Binder: onTransact: 8
+02-19 18:04:06.669   496  1127 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@e0159a2
+02-19 18:04:06.688   496  1127 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:04:06.688   496  1127 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:04:06.688   496  1127 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@8f6d730}
+02-19 18:04:06.688   496  1127 D 201521037: Binder: onTransact: 8
+02-19 18:04:06.688   496  1127 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@bf7145e
+02-19 18:04:06.759   496  1127 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:04:06.759   496  1127 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:04:06.759   496  1127 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@eaa365c}
+02-19 18:04:06.760   496  1127 D 201521037: Binder: onTransact: 8
+02-19 18:04:06.760   496  1127 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@e0159a2
+02-19 18:04:06.767   496  1127 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:04:06.767   496  1127 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:04:06.767   496  1127 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@f5f6ae1}
+02-19 18:04:06.774   496  1127 D 201521037: Binder: onTransact: 8
+02-19 18:04:06.774   496  1127 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@e0159a2
+02-19 18:04:06.780   496  1127 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:04:06.780   496  1127 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:04:06.780   496  1127 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@f9c8863}
+02-19 18:04:06.827   496  1127 D 201521037: Binder: onTransact: 8
+02-19 18:04:06.827   496  1127 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@bf7145e
+02-19 18:04:06.895   496   516 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@638e613
+02-19 18:04:06.895   496   516 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@8b2049e
+02-19 18:04:06.915   496   951 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:04:06.915   496   951 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:04:06.915   496   951 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@89f4c38}
+02-19 18:04:06.936   496   951 D 201521037: Binder: onTransact: 8
+02-19 18:04:06.936   496   951 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@1636a50
+02-19 18:04:07.274  2198  2198 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@9ab7354
+02-19 18:04:07.274  2198  2198 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@1b6ebf2
+02-19 18:04:07.286  2198  2198 D 201521037: MainActivity: onServiceConnected: 1
+02-19 18:04:07.286  2198  2198 D 201521037: onServiceConnected: iCalcServicecom.example.aidlserver.ICalcService$Stub$Proxy@4d974b5
+02-19 18:04:10.374  2198  2198 D 201521037: getAddResult: Called
+02-19 18:04:10.375  2198  2198 D 201521037: get_inputs: Called
+02-19 18:04:11.735  2198  2198 D 201521037: getSubResult: Called
+02-19 18:04:11.736  2198  2198 D 201521037: get_inputs: Called
+02-19 18:04:12.236  2198  2198 D 201521037: getMulResult: Called
+02-19 18:04:12.236  2198  2198 D 201521037: get_inputs: Called
+02-19 18:04:12.686  2198  2198 D 201521037: getDivResult: Called
+02-19 18:04:12.687  2198  2198 D 201521037: get_inputs: Called
+02-19 18:04:13.914  2198  2198 D 201521037: getAddResult: Called
+02-19 18:04:13.915  2198  2198 D 201521037: get_inputs: Called
+02-19 18:04:14.283  2198  2198 D 201521037: getSubResult: Called
+02-19 18:04:14.283  2198  2198 D 201521037: get_inputs: Called
+02-19 18:04:14.737  2198  2198 D 201521037: getMulResult: Called
+02-19 18:04:14.739  2198  2198 D 201521037: get_inputs: Called
+02-19 18:04:15.422  2198  2198 D 201521037: getDivResult: Called
+02-19 18:04:15.423  2198  2198 D 201521037: get_inputs: Called
+02-19 18:04:16.425  2198  2198 D 201521037: getAddResult: Called
+02-19 18:04:16.784  2198  2198 D 201521037: getSubResult: Called
+02-19 18:04:17.222  2198  2198 D 201521037: getMulResult: Called
+02-19 18:04:17.804  2198  2198 D 201521037: getDivResult: Called
+02-19 18:04:18.365  2198  2198 D 201521037: ContextImpl: bindServiceCommon: 0: mPackageInfo: android.app.LoadedApk@9ab7354
+02-19 18:04:18.365  2198  2198 D 201521037: ContextImpl: bindServiceCommon: 2: executor==null android.app.LoadedApk$ServiceDispatcher$InnerConnection@7158a6c
+02-19 18:04:18.373  2198  2198 D 201521037: isBind: true
+02-19 18:04:18.377  2198  2198 D 201521037: MainActivity: onServiceConnected: 1
+02-19 18:04:18.378  2198  2198 D 201521037: onServiceConnected: iCalcServicecom.example.aidlserver.ICalcService$Stub$Proxy@14ed4ca
+02-19 18:04:18.898  2198  2198 D 201521037: getAddResult: Called
+02-19 18:04:18.900  2198  2198 D 201521037: get_inputs: Called
+02-19 18:04:22.822   496  1268 D 201521037: Binder: onTransact: 0: start!!
+02-19 18:04:22.822   496  1268 D 201521037: Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: 1598246212
+02-19 18:04:22.822   496  1268 D 201521037: Binder: onTransact: 7: out: {ParcelFileDescriptor: java.io.FileDescriptor@59603c3}
+02-19 18:04:22.833   496  1268 D 201521037: Binder: onTransact: 8
+02-19 18:04:22.833   496  1268 D 201521037: Binder: onTransact: 9: reply: android.os.Parcel@e40a35

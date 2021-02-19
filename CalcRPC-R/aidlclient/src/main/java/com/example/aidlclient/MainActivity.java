@@ -1,8 +1,5 @@
 package com.example.aidlclient;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -17,10 +14,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.aidlserver.ICalcService;
 import com.example.aidlserver.ICalcServiceCallback;
 
 public class MainActivity extends AppCompatActivity {
+
     String TAG = "201521037";
     String no_service = "No Service.";
     TextView result_id;
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private final ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-	    Log.d(TAG, "MainActivity: onServiceConnected: 1");
+            Log.d(TAG, "MainActivity: onServiceConnected: 1");
             iCalcService = ICalcService.Stub.asInterface(service);
             try {
                 iCalcService.addCallback(callback);
@@ -106,8 +106,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (!bound) {
-            Intent intent = new Intent("com.example.aidlserver.MY_SERVICE");
-            intent.setPackage("com.example.aidlserver");
+            Intent intent = new Intent().setClassName("com.example.aidlserver",
+                    "com.example.aidlserver.CalcService");
             bindService(intent, connection, Context.BIND_AUTO_CREATE);
         }
     }

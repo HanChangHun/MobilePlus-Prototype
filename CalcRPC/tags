@@ -1,0 +1,182 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+addCallback	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      @Override public boolean addCallback(com.example.aidlserver.ICalcServiceCallback callback) throws android.os.RemoteException$/;"	m	class:ICalcService.Stub.Proxy
+addCallback	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    @Override public boolean addCallback(com.example.aidlserver.ICalcServiceCallback callback) throws android.os.RemoteException$/;"	m	class:ICalcService.Default
+addCallback	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^  public boolean addCallback(com.example.aidlserver.ICalcServiceCallback callback) throws android.os.RemoteException;$/;"	m	interface:ICalcService
+addCallback	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      @Override public boolean addCallback(com.example.aidlserver.ICalcServiceCallback callback) throws android.os.RemoteException$/;"	m	class:ICalcService.Stub.Proxy
+addCallback	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    @Override public boolean addCallback(com.example.aidlserver.ICalcServiceCallback callback) throws android.os.RemoteException$/;"	m	class:ICalcService.Default
+addCallback	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^  public boolean addCallback(com.example.aidlserver.ICalcServiceCallback callback) throws android.os.RemoteException;$/;"	m	interface:ICalcService
+addition_isCorrect	aidlclient/src/test/java/com/example/aidlclient/ExampleUnitTest.java	/^    public void addition_isCorrect() {$/;"	m	class:ExampleUnitTest
+addition_isCorrect	aidlserver/src/test/java/com/example/aidlserver/ExampleUnitTest.java	/^    public void addition_isCorrect() {$/;"	m	class:ExampleUnitTest
+APPLICATION_ID	aidlclient/build/generated/source/buildConfig/debug/com/example/aidlclient/BuildConfig.java	/^  public static final String APPLICATION_ID = "com.example.aidlclient";$/;"	f	class:BuildConfig
+APPLICATION_ID	aidlserver/build/generated/source/buildConfig/debug/com/example/aidlserver/BuildConfig.java	/^  public static final String APPLICATION_ID = "com.example.aidlserver";$/;"	f	class:BuildConfig
+APP_BASE_NAME	gradlew.bat	/^set APP_BASE_NAME=%~n0$/;"	v
+APP_HOME	gradlew.bat	/^set APP_HOME=%DIRNAME%$/;"	v
+asBinder	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      @Override public android.os.IBinder asBinder()$/;"	m	class:ICalcService.Stub.Proxy
+asBinder	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    @Override public android.os.IBinder asBinder()$/;"	m	class:ICalcService.Stub
+asBinder	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    public android.os.IBinder asBinder() {$/;"	m	class:ICalcService.Default
+asBinder	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      @Override public android.os.IBinder asBinder()$/;"	m	class:ICalcServiceCallback.Stub.Proxy
+asBinder	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    @Override public android.os.IBinder asBinder()$/;"	m	class:ICalcServiceCallback.Stub
+asBinder	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    public android.os.IBinder asBinder() {$/;"	m	class:ICalcServiceCallback.Default
+asBinder	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      @Override public android.os.IBinder asBinder()$/;"	m	class:ICalcService.Stub.Proxy
+asBinder	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    @Override public android.os.IBinder asBinder()$/;"	m	class:ICalcService.Stub
+asBinder	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    public android.os.IBinder asBinder() {$/;"	m	class:ICalcService.Default
+asBinder	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      @Override public android.os.IBinder asBinder()$/;"	m	class:ICalcServiceCallback.Stub.Proxy
+asBinder	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    @Override public android.os.IBinder asBinder()$/;"	m	class:ICalcServiceCallback.Stub
+asBinder	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    public android.os.IBinder asBinder() {$/;"	m	class:ICalcServiceCallback.Default
+asInterface	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    public static com.example.aidlserver.ICalcService asInterface(android.os.IBinder obj)$/;"	m	class:ICalcService.Stub
+asInterface	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    public static com.example.aidlserver.ICalcServiceCallback asInterface(android.os.IBinder obj)$/;"	m	class:ICalcServiceCallback.Stub
+asInterface	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    public static com.example.aidlserver.ICalcService asInterface(android.os.IBinder obj)$/;"	m	class:ICalcService.Stub
+asInterface	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    public static com.example.aidlserver.ICalcServiceCallback asInterface(android.os.IBinder obj)$/;"	m	class:ICalcServiceCallback.Stub
+binder	aidlserver/src/main/java/com/example/aidlserver/MyService.java	/^    private Binder binder = new ICalcService.Stub() {$/;"	f	class:MyService	file:
+bound	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    private boolean bound = false;$/;"	f	class:MainActivity	file:
+BuildConfig	aidlclient/build/generated/source/buildConfig/debug/com/example/aidlclient/BuildConfig.java	/^public final class BuildConfig {$/;"	c
+BuildConfig	aidlserver/build/generated/source/buildConfig/debug/com/example/aidlserver/BuildConfig.java	/^public final class BuildConfig {$/;"	c
+BUILD_TYPE	aidlclient/build/generated/source/buildConfig/debug/com/example/aidlclient/BuildConfig.java	/^  public static final String BUILD_TYPE = "debug";$/;"	f	class:BuildConfig
+BUILD_TYPE	aidlserver/build/generated/source/buildConfig/debug/com/example/aidlserver/BuildConfig.java	/^  public static final String BUILD_TYPE = "debug";$/;"	f	class:BuildConfig
+callback	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    private final ICalcServiceCallback callback = new ICalcServiceCallback.Stub() {$/;"	f	class:MainActivity	file:
+CLASSPATH	gradlew.bat	/^set CLASSPATH=%APP_HOME%\\gradle\\wrapper\\gradle-wrapper.jar$/;"	v
+CMD_LINE_ARGS	gradlew.bat	/^set CMD_LINE_ARGS=$/;"	v
+CMD_LINE_ARGS	gradlew.bat	/^set CMD_LINE_ARGS=%*$/;"	v
+com.example.aidlclient	aidlclient/build/generated/source/buildConfig/debug/com/example/aidlclient/BuildConfig.java	/^package com.example.aidlclient;$/;"	p
+com.example.aidlclient	aidlclient/src/androidTest/java/com/example/aidlclient/ExampleInstrumentedTest.java	/^package com.example.aidlclient;$/;"	p
+com.example.aidlclient	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^package com.example.aidlclient;$/;"	p
+com.example.aidlclient	aidlclient/src/test/java/com/example/aidlclient/ExampleUnitTest.java	/^package com.example.aidlclient;$/;"	p
+com.example.aidlserver	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^package com.example.aidlserver;$/;"	p
+com.example.aidlserver	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^package com.example.aidlserver;$/;"	p
+com.example.aidlserver	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^package com.example.aidlserver;$/;"	p
+com.example.aidlserver	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^package com.example.aidlserver;$/;"	p
+com.example.aidlserver	aidlserver/build/generated/source/buildConfig/debug/com/example/aidlserver/BuildConfig.java	/^package com.example.aidlserver;$/;"	p
+com.example.aidlserver	aidlserver/src/androidTest/java/com/example/aidlserver/ExampleInstrumentedTest.java	/^package com.example.aidlserver;$/;"	p
+com.example.aidlserver	aidlserver/src/main/java/com/example/aidlserver/MainActivity.java	/^package com.example.aidlserver;$/;"	p
+com.example.aidlserver	aidlserver/src/main/java/com/example/aidlserver/MyService.java	/^package com.example.aidlserver;$/;"	p
+com.example.aidlserver	aidlserver/src/test/java/com/example/aidlserver/ExampleUnitTest.java	/^package com.example.aidlserver;$/;"	p
+connection	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    private final ServiceConnection connection = new ServiceConnection() {$/;"	f	class:MainActivity	file:
+DEBUG	aidlclient/build/generated/source/buildConfig/debug/com/example/aidlclient/BuildConfig.java	/^  public static final boolean DEBUG = Boolean.parseBoolean("true");$/;"	f	class:BuildConfig
+DEBUG	aidlserver/build/generated/source/buildConfig/debug/com/example/aidlserver/BuildConfig.java	/^  public static final boolean DEBUG = Boolean.parseBoolean("true");$/;"	f	class:BuildConfig
+Default	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^  public static class Default implements com.example.aidlserver.ICalcService$/;"	c	interface:ICalcService
+Default	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^  public static class Default implements com.example.aidlserver.ICalcServiceCallback$/;"	c	interface:ICalcServiceCallback
+Default	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^  public static class Default implements com.example.aidlserver.ICalcService$/;"	c	interface:ICalcService
+Default	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^  public static class Default implements com.example.aidlserver.ICalcServiceCallback$/;"	c	interface:ICalcServiceCallback
+DEFAULT_JVM_OPTS	gradlew.bat	/^set DEFAULT_JVM_OPTS=$/;"	v
+DESCRIPTOR	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    private static final java.lang.String DESCRIPTOR = "com.example.aidlserver.ICalcService";$/;"	f	class:ICalcService.Stub	file:
+DESCRIPTOR	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    private static final java.lang.String DESCRIPTOR = "com.example.aidlserver.ICalcServiceCallback";$/;"	f	class:ICalcServiceCallback.Stub	file:
+DESCRIPTOR	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    private static final java.lang.String DESCRIPTOR = "com.example.aidlserver.ICalcService";$/;"	f	class:ICalcService.Stub	file:
+DESCRIPTOR	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    private static final java.lang.String DESCRIPTOR = "com.example.aidlserver.ICalcServiceCallback";$/;"	f	class:ICalcServiceCallback.Stub	file:
+DIRNAME	gradlew.bat	/^if "%DIRNAME%" == "" set DIRNAME=.$/;"	v
+DIRNAME	gradlew.bat	/^set DIRNAME=%~dp0$/;"	v
+end	gradlew.bat	/^:end$/;"	l
+ExampleInstrumentedTest	aidlclient/src/androidTest/java/com/example/aidlclient/ExampleInstrumentedTest.java	/^public class ExampleInstrumentedTest {$/;"	c
+ExampleInstrumentedTest	aidlserver/src/androidTest/java/com/example/aidlserver/ExampleInstrumentedTest.java	/^public class ExampleInstrumentedTest {$/;"	c
+ExampleUnitTest	aidlclient/src/test/java/com/example/aidlclient/ExampleUnitTest.java	/^public class ExampleUnitTest {$/;"	c
+ExampleUnitTest	aidlserver/src/test/java/com/example/aidlserver/ExampleUnitTest.java	/^public class ExampleUnitTest {$/;"	c
+execute	gradlew.bat	/^:execute$/;"	l
+fail	gradlew.bat	/^:fail$/;"	l
+findJavaFromJavaHome	gradlew.bat	/^:findJavaFromJavaHome$/;"	l
+getAddResult	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    public void getAddResult(View view) throws RemoteException {$/;"	m	class:MainActivity
+getDefaultImpl	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    public static com.example.aidlserver.ICalcService getDefaultImpl() {$/;"	m	class:ICalcService.Stub
+getDefaultImpl	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    public static com.example.aidlserver.ICalcServiceCallback getDefaultImpl() {$/;"	m	class:ICalcServiceCallback.Stub
+getDefaultImpl	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    public static com.example.aidlserver.ICalcService getDefaultImpl() {$/;"	m	class:ICalcService.Stub
+getDefaultImpl	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    public static com.example.aidlserver.ICalcServiceCallback getDefaultImpl() {$/;"	m	class:ICalcServiceCallback.Stub
+getDivResult	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    public void getDivResult(View view) throws RemoteException {$/;"	m	class:MainActivity
+getInterfaceDescriptor	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      public java.lang.String getInterfaceDescriptor()$/;"	m	class:ICalcService.Stub.Proxy
+getInterfaceDescriptor	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      public java.lang.String getInterfaceDescriptor()$/;"	m	class:ICalcServiceCallback.Stub.Proxy
+getInterfaceDescriptor	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      public java.lang.String getInterfaceDescriptor()$/;"	m	class:ICalcService.Stub.Proxy
+getInterfaceDescriptor	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      public java.lang.String getInterfaceDescriptor()$/;"	m	class:ICalcServiceCallback.Stub.Proxy
+getMulResult	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    public void getMulResult(View view) throws RemoteException {$/;"	m	class:MainActivity
+getResult	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      @Override public java.lang.String getResult(java.lang.String mode) throws android.os.RemoteException$/;"	m	class:ICalcService.Stub.Proxy
+getResult	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    @Override public java.lang.String getResult(java.lang.String mode) throws android.os.RemoteException$/;"	m	class:ICalcService.Default
+getResult	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^  public java.lang.String getResult(java.lang.String mode) throws android.os.RemoteException;$/;"	m	interface:ICalcService
+getResult	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      @Override public java.lang.String getResult(java.lang.String mode) throws android.os.RemoteException$/;"	m	class:ICalcService.Stub.Proxy
+getResult	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    @Override public java.lang.String getResult(java.lang.String mode) throws android.os.RemoteException$/;"	m	class:ICalcService.Default
+getResult	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^  public java.lang.String getResult(java.lang.String mode) throws android.os.RemoteException;$/;"	m	interface:ICalcService
+getSubResult	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    public void getSubResult(View view) throws RemoteException {$/;"	m	class:MainActivity
+get_inputs	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      @Override public float[] get_inputs() throws android.os.RemoteException$/;"	m	class:ICalcServiceCallback.Stub.Proxy
+get_inputs	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    @Override public float[] get_inputs() throws android.os.RemoteException$/;"	m	class:ICalcServiceCallback.Default
+get_inputs	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^  public float[] get_inputs() throws android.os.RemoteException;$/;"	m	interface:ICalcServiceCallback
+get_inputs	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      @Override public float[] get_inputs() throws android.os.RemoteException$/;"	m	class:ICalcServiceCallback.Stub.Proxy
+get_inputs	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    @Override public float[] get_inputs() throws android.os.RemoteException$/;"	m	class:ICalcServiceCallback.Default
+get_inputs	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^  public float[] get_inputs() throws android.os.RemoteException;$/;"	m	interface:ICalcServiceCallback
+ICalcService	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^public interface ICalcService extends android.os.IInterface$/;"	i
+iCalcService	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    private ICalcService iCalcService;$/;"	f	class:MainActivity	file:
+ICalcService	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^public interface ICalcService extends android.os.IInterface$/;"	i
+ICalcServiceCallback	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^public interface ICalcServiceCallback extends android.os.IInterface$/;"	i
+ICalcServiceCallback	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^public interface ICalcServiceCallback extends android.os.IInterface$/;"	i
+init	gradlew.bat	/^:init$/;"	l
+JAVA_EXE	gradlew.bat	/^set JAVA_EXE=%JAVA_HOME%\/bin\/java.exe$/;"	v
+JAVA_EXE	gradlew.bat	/^set JAVA_EXE=java.exe$/;"	v
+JAVA_HOME	gradlew.bat	/^set JAVA_HOME=%JAVA_HOME:"=%$/;"	v
+listeners	aidlserver/src/main/java/com/example/aidlserver/MyService.java	/^    List<ICalcServiceCallback> listeners = new ArrayList<>();$/;"	f	class:MyService
+MainActivity	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^public class MainActivity extends AppCompatActivity {$/;"	c
+MainActivity	aidlserver/src/main/java/com/example/aidlserver/MainActivity.java	/^public class MainActivity extends AppCompatActivity {$/;"	c
+mainEnd	gradlew.bat	/^:mainEnd$/;"	l
+mCallback	aidlserver/src/main/java/com/example/aidlserver/MyService.java	/^    ICalcServiceCallback mCallback;$/;"	f	class:MyService
+mRemote	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      private android.os.IBinder mRemote;$/;"	f	class:ICalcService.Stub.Proxy	file:
+mRemote	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      private android.os.IBinder mRemote;$/;"	f	class:ICalcServiceCallback.Stub.Proxy	file:
+mRemote	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      private android.os.IBinder mRemote;$/;"	f	class:ICalcService.Stub.Proxy	file:
+mRemote	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      private android.os.IBinder mRemote;$/;"	f	class:ICalcServiceCallback.Stub.Proxy	file:
+MyService	aidlserver/src/main/java/com/example/aidlserver/MyService.java	/^public class MyService extends Service {$/;"	c
+no_service	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    String no_service = "No Service.";$/;"	f	class:MainActivity
+omega	gradlew.bat	/^:omega$/;"	l
+onBind	aidlserver/src/main/java/com/example/aidlserver/MyService.java	/^    public IBinder onBind(Intent intent) {$/;"	m	class:MyService
+onCreate	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:MainActivity
+onCreate	aidlserver/src/main/java/com/example/aidlserver/MainActivity.java	/^    protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:MainActivity
+onStart	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    protected void onStart() {$/;"	m	class:MainActivity
+onStop	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    protected void onStop() {$/;"	m	class:MainActivity
+onTransact	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    @Override public boolean onTransact(int code, android.os.Parcel data, android.os.Parcel reply, int flags) throws android.os.RemoteException$/;"	m	class:ICalcService.Stub
+onTransact	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    @Override public boolean onTransact(int code, android.os.Parcel data, android.os.Parcel reply, int flags) throws android.os.RemoteException$/;"	m	class:ICalcServiceCallback.Stub
+onTransact	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    @Override public boolean onTransact(int code, android.os.Parcel data, android.os.Parcel reply, int flags) throws android.os.RemoteException$/;"	m	class:ICalcService.Stub
+onTransact	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    @Override public boolean onTransact(int code, android.os.Parcel data, android.os.Parcel reply, int flags) throws android.os.RemoteException$/;"	m	class:ICalcServiceCallback.Stub
+Proxy	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      Proxy(android.os.IBinder remote)$/;"	m	class:ICalcService.Stub.Proxy
+Proxy	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    private static class Proxy implements com.example.aidlserver.ICalcService$/;"	c	class:ICalcService.Stub
+Proxy	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      Proxy(android.os.IBinder remote)$/;"	m	class:ICalcServiceCallback.Stub.Proxy
+Proxy	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    private static class Proxy implements com.example.aidlserver.ICalcServiceCallback$/;"	c	class:ICalcServiceCallback.Stub
+Proxy	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      Proxy(android.os.IBinder remote)$/;"	m	class:ICalcService.Stub.Proxy
+Proxy	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    private static class Proxy implements com.example.aidlserver.ICalcService$/;"	c	class:ICalcService.Stub
+Proxy	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      Proxy(android.os.IBinder remote)$/;"	m	class:ICalcServiceCallback.Stub.Proxy
+Proxy	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    private static class Proxy implements com.example.aidlserver.ICalcServiceCallback$/;"	c	class:ICalcServiceCallback.Stub
+removeCallback	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      @Override public boolean removeCallback() throws android.os.RemoteException$/;"	m	class:ICalcService.Stub.Proxy
+removeCallback	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    @Override public boolean removeCallback() throws android.os.RemoteException$/;"	m	class:ICalcService.Default
+removeCallback	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^  public boolean removeCallback() throws android.os.RemoteException;$/;"	m	interface:ICalcService
+removeCallback	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      @Override public boolean removeCallback() throws android.os.RemoteException$/;"	m	class:ICalcService.Stub.Proxy
+removeCallback	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    @Override public boolean removeCallback() throws android.os.RemoteException$/;"	m	class:ICalcService.Default
+removeCallback	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^  public boolean removeCallback() throws android.os.RemoteException;$/;"	m	interface:ICalcService
+result_id	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    TextView result_id;$/;"	f	class:MainActivity
+sDefaultImpl	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      public static com.example.aidlserver.ICalcService sDefaultImpl;$/;"	f	class:ICalcService.Stub.Proxy
+sDefaultImpl	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      public static com.example.aidlserver.ICalcServiceCallback sDefaultImpl;$/;"	f	class:ICalcServiceCallback.Stub.Proxy
+sDefaultImpl	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^      public static com.example.aidlserver.ICalcService sDefaultImpl;$/;"	f	class:ICalcService.Stub.Proxy
+sDefaultImpl	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^      public static com.example.aidlserver.ICalcServiceCallback sDefaultImpl;$/;"	f	class:ICalcServiceCallback.Stub.Proxy
+setDefaultImpl	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    public static boolean setDefaultImpl(com.example.aidlserver.ICalcService impl) {$/;"	m	class:ICalcService.Stub
+setDefaultImpl	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    public static boolean setDefaultImpl(com.example.aidlserver.ICalcServiceCallback impl) {$/;"	m	class:ICalcServiceCallback.Stub
+setDefaultImpl	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    public static boolean setDefaultImpl(com.example.aidlserver.ICalcService impl) {$/;"	m	class:ICalcService.Stub
+setDefaultImpl	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    public static boolean setDefaultImpl(com.example.aidlserver.ICalcServiceCallback impl) {$/;"	m	class:ICalcServiceCallback.Stub
+Stub	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    public Stub()$/;"	m	class:ICalcService.Stub
+Stub	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^  public static abstract class Stub extends android.os.Binder implements com.example.aidlserver.ICalcService$/;"	c	interface:ICalcService
+Stub	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    public Stub()$/;"	m	class:ICalcServiceCallback.Stub
+Stub	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^  public static abstract class Stub extends android.os.Binder implements com.example.aidlserver.ICalcServiceCallback$/;"	c	interface:ICalcServiceCallback
+Stub	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    public Stub()$/;"	m	class:ICalcService.Stub
+Stub	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^  public static abstract class Stub extends android.os.Binder implements com.example.aidlserver.ICalcService$/;"	c	interface:ICalcService
+Stub	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    public Stub()$/;"	m	class:ICalcServiceCallback.Stub
+Stub	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^  public static abstract class Stub extends android.os.Binder implements com.example.aidlserver.ICalcServiceCallback$/;"	c	interface:ICalcServiceCallback
+TAG	aidlclient/src/main/java/com/example/aidlclient/MainActivity.java	/^    String TAG = "MainActivity";$/;"	f	class:MainActivity
+TRANSACTION_addCallback	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    static final int TRANSACTION_addCallback = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);$/;"	f	class:ICalcService.Stub
+TRANSACTION_addCallback	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    static final int TRANSACTION_addCallback = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);$/;"	f	class:ICalcService.Stub
+TRANSACTION_getResult	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    static final int TRANSACTION_getResult = (android.os.IBinder.FIRST_CALL_TRANSACTION + 2);$/;"	f	class:ICalcService.Stub
+TRANSACTION_getResult	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    static final int TRANSACTION_getResult = (android.os.IBinder.FIRST_CALL_TRANSACTION + 2);$/;"	f	class:ICalcService.Stub
+TRANSACTION_get_inputs	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    static final int TRANSACTION_get_inputs = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);$/;"	f	class:ICalcServiceCallback.Stub
+TRANSACTION_get_inputs	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcServiceCallback.java	/^    static final int TRANSACTION_get_inputs = (android.os.IBinder.FIRST_CALL_TRANSACTION + 0);$/;"	f	class:ICalcServiceCallback.Stub
+TRANSACTION_removeCallback	aidlclient/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    static final int TRANSACTION_removeCallback = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);$/;"	f	class:ICalcService.Stub
+TRANSACTION_removeCallback	aidlserver/build/generated/aidl_source_output_dir/debug/out/com/example/aidlserver/ICalcService.java	/^    static final int TRANSACTION_removeCallback = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);$/;"	f	class:ICalcService.Stub
+useAppContext	aidlclient/src/androidTest/java/com/example/aidlclient/ExampleInstrumentedTest.java	/^    public void useAppContext() {$/;"	m	class:ExampleInstrumentedTest
+useAppContext	aidlserver/src/androidTest/java/com/example/aidlserver/ExampleInstrumentedTest.java	/^    public void useAppContext() {$/;"	m	class:ExampleInstrumentedTest
+VERSION_CODE	aidlclient/build/generated/source/buildConfig/debug/com/example/aidlclient/BuildConfig.java	/^  public static final int VERSION_CODE = 1;$/;"	f	class:BuildConfig
+VERSION_CODE	aidlserver/build/generated/source/buildConfig/debug/com/example/aidlserver/BuildConfig.java	/^  public static final int VERSION_CODE = 1;$/;"	f	class:BuildConfig
+VERSION_NAME	aidlclient/build/generated/source/buildConfig/debug/com/example/aidlclient/BuildConfig.java	/^  public static final String VERSION_NAME = "1.0";$/;"	f	class:BuildConfig
+VERSION_NAME	aidlserver/build/generated/source/buildConfig/debug/com/example/aidlserver/BuildConfig.java	/^  public static final String VERSION_NAME = "1.0";$/;"	f	class:BuildConfig
+win9xME_args	gradlew.bat	/^:win9xME_args$/;"	l
+win9xME_args_slurp	gradlew.bat	/^:win9xME_args_slurp$/;"	l
+_SKIP	gradlew.bat	/^set _SKIP=2$/;"	v

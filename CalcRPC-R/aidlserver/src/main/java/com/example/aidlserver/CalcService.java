@@ -6,11 +6,7 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.os.RemoteException;
 
-import com.example.aidlserver.ICalcService;
-import com.example.aidlserver.ICalcServiceCallback;
-
-public class MyService extends Service {
-
+public class CalcService extends Service {
     ICalcServiceCallback mCallback;
     private Binder binder = new ICalcService.Stub() {
         @Override

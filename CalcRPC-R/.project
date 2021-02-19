@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>InterProcessRPC</name>
-	<comment>Project CalcRPC created by Buildship.</comment>
+	<name>AIDLClient</name>
+	<comment>Project CalcRPC-R created by Buildship.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>0</id>
+			<id>1613712983553</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

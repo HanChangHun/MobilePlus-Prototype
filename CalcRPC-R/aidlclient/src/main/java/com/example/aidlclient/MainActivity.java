@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             bound = true;
-            Log.d(TAG, "onServiceConnected: Called");
+            Log.d(TAG, "onServiceConnected: iCalcService" + iCalcService);
         }
 
         @Override

@@ -302,6 +302,7 @@ import java.util.Set;
  * {@hide}
  */
 public class ActivityTaskManagerService extends IActivityTaskManager.Stub {
+    String MY_TAG = "201521037";
     private static final String TAG = TAG_WITH_CLASS_NAME ? "ActivityTaskManagerService" : TAG_ATM;
     static final String TAG_STACK = TAG + POSTFIX_STACK;
     static final String TAG_SWITCH = TAG + POSTFIX_SWITCH;
@@ -6666,12 +6667,16 @@ public class ActivityTaskManagerService extends IActivityTaskManager.Stub {
 
         @Override
         public ActivityServiceConnectionsHolder getServiceConnectionsHolder(IBinder token) {
+	    Log.d(MY_TAG, "ActivityTaskManagerService: getServiceConnectionsHolder: Called");
             synchronized (mGlobalLock) {
                 final ActivityRecord r = ActivityRecord.isInStackLocked(token);
+	        Log.d(MY_TAG, "ActivityTaskManagerService: getServiceConnectionsHolder: 0");
                 if (r == null) {
+	            Log.d(MY_TAG, "ActivityTaskManagerService: getServiceConnectionsHolder: 1");
                     return null;
                 }
                 if (r.mServiceConnectionsHolder == null) {
+	            Log.d(MY_TAG, "ActivityTaskManagerService: getServiceConnectionsHolder: 2");
                     r.mServiceConnectionsHolder = new ActivityServiceConnectionsHolder(
                             ActivityTaskManagerService.this, r);
                 }

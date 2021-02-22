@@ -45,6 +45,8 @@ import android.view.DisplayAdjustments;
 import android.view.WindowManager.LayoutParams.WindowType;
 import android.view.autofill.AutofillManager.AutofillClient;
 
+import android.util.Log; //chun: added
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -59,6 +61,7 @@ import java.util.concurrent.Executor;
  * the original Context.
  */
 public class ContextWrapper extends Context {
+    String MY_TAG = "201521037";  // chun: added
     @UnsupportedAppUsage
     Context mBase;
 
@@ -753,6 +756,7 @@ public class ContextWrapper extends Context {
     @Override
     public boolean bindService(Intent service, ServiceConnection conn,
             int flags) {
+	Log.d(MY_TAG, "ContextWrapper: bindService");  // chun:added
         return mBase.bindService(service, conn, flags);
     }
 

@@ -1653,17 +1653,20 @@ class ContextImpl extends Context {
     }
 
     private void validateServiceIntent(Intent service) {
+	Log.d(MY_TAG, "ContextImpl: validateServiceIntent: 0"); // chun added
         if (service.getComponent() == null && service.getPackage() == null) {
+	    Log.d(MY_TAG, "ContextImpl: validateServiceIntent: 1"); // chun added
             if (getApplicationInfo().targetSdkVersion >= Build.VERSION_CODES.LOLLIPOP) {
+	        Log.d(MY_TAG, "ContextImpl: validateServiceIntent: 2"); // chun added
                 IllegalArgumentException ex = new IllegalArgumentException(
                         "Service Intent must be explicit: " + service);
                 throw ex;
             } else {
+	        Log.d(MY_TAG, "ContextImpl: validateServiceIntent: 3"); // chun added
                 Log.w(TAG, "Implicit intents with startService are not safe: " + service
                         + " " + Debug.getCallers(2, 3));
             }
         }
-	Log.d(TAG, "ContextImpl: validateServiceIntent: 0"); // chun added
     }
 
     @Override
@@ -1747,6 +1750,7 @@ class ContextImpl extends Context {
 
     @Override
     public boolean bindService(Intent service, ServiceConnection conn, int flags) {
+	Log.d(MY_TAG, "ContextImpl: bindService");  // chun added
         warnIfCallingFromSystemProcess();
         return bindServiceCommon(service, conn, flags, null, mMainThread.getHandler(), null,
                 getUser());
@@ -1828,18 +1832,20 @@ class ContextImpl extends Context {
         }
         validateServiceIntent(service);
         try {
-            IBinder token = getActivityToken();
+	    Log.d(MY_TAG,"ContextImpl: bindServiceCommon: 3"); // chun added
+            IBinder token = getActivityToken();  // chun: getActivityToken...
             if (token == null && (flags&BIND_AUTO_CREATE) == 0 && mPackageInfo != null
                     && mPackageInfo.getApplicationInfo().targetSdkVersion
                     < android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
                 flags |= BIND_WAIVE_PRIORITY;
-		Log.d(MY_TAG,"ContextImpl: bindServiceCommon: 3: in if token == null"); // chun added
+		Log.d(MY_TAG,"ContextImpl: bindServiceCommon: 4: in if token == null"); // chun added
             }
             service.prepareToLeaveProcess(this);
             int res = ActivityManager.getService().bindIsolatedService(
                 mMainThread.getApplicationThread(), getActivityToken(), service,
                 service.resolveTypeIfNeeded(getContentResolver()),
                 sd, flags, instanceName, getOpPackageName(), user.getIdentifier());  // chun: bindIsolatedService
+	    Log.d(MY_TAG,"ContextImpl: bindServiceCommon: 5: res: " + res); // chun added
             if (res < 0) {
                 throw new SecurityException(
                         "Not allowed to bind to service " + service);

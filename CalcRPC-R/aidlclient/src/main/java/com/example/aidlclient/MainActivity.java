@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private final ICalcServiceCallback callback = new ICalcServiceCallback.Stub() {
         @Override
         public float[] get_inputs() {
-            Log.d(TAG, "get_inputs: Called");
+            Log.d(TAG, "MainActivity: callback: get_inputs: Called");
             float[] inputs = new float[2];
 
             EditText input1_id = findViewById(R.id.input1_id);
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private final ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            Log.d(TAG, "MainActivity: onServiceConnected: 1");
+            Log.d(TAG, "MainActivity: onServiceConnected: Called");
             iCalcService = ICalcService.Stub.asInterface(service);
             try {
                 iCalcService.addCallback(callback);
@@ -58,19 +58,21 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             bound = true;
-            Log.d(TAG, "onServiceConnected: iCalcService" + iCalcService);
+            Log.d(TAG, "MainActivity: onServiceConnected: iCalcService: " + iCalcService);
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Log.d(TAG, "onServiceDisconnected: Called");
+            Log.d(TAG, "MainActivity: onServiceDisconnected: Called");
             iCalcService = null;
             bound = false;
         }
+
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "MainActivity: onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         result_id = findViewById(R.id.result_id);
@@ -79,18 +81,21 @@ public class MainActivity extends AppCompatActivity {
         bindButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d(TAG, "MainActivity: onCreate: onClick: bindButton");
                 if (!bound) {
                     Intent intent = new Intent().setClassName("com.example.aidlserver",
                             "com.example.aidlserver.CalcService");
                     boolean isBind = bindService(intent, connection, Context.BIND_AUTO_CREATE);
-                    Log.d(TAG, "isBind: " + isBind);
+                    Log.d(TAG, "MainActivity: onCreate: isBind: " + isBind);
                 }
             }
         });
+
         Button unbindButton = (Button) findViewById(R.id.unbind_btn);
         unbindButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d(TAG, "MainActivity: onCreate: onClick: unbindButton");
                 if (bound) {
                     unbindService(connection);
                     bound = false;
@@ -99,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     } catch (RemoteException e) {
                         e.printStackTrace();
                     }
+                    Log.d(TAG, "MainActivity: onCreate: bound: " + bound);
                 }
             }
         });
@@ -107,16 +113,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        Log.d(TAG, "MainActivity: onStart");
         if (!bound) {
             Intent intent = new Intent().setClassName("com.example.aidlserver",
                     "com.example.aidlserver.CalcService");
-            bindService(intent, connection, Context.BIND_AUTO_CREATE);
+            boolean isBind = bindService(intent, connection, Context.BIND_AUTO_CREATE);
+            Log.d(TAG, "MainActivity: onStart: isBind: " + isBind);
         }
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        Log.d(TAG, "MainActivity: onStop");
         if (bound) {
             try {
                 iCalcService.removeCallback();
@@ -125,39 +134,36 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             unbindService(connection);
+            Log.d(TAG, "MainActivity: onStop: bound: " + bound);
         }
     }
 
 
     public void getAddResult(View view) throws RemoteException {
-        Log.d(TAG, "getAddResult: Called");
+        Log.d(TAG, "MainActivity: getAddResult: Called");
         if (bound) {
             result_id.setText(iCalcService.getResult("ADD"));
-        }
-        else result_id.setText(no_service);
+        } else result_id.setText(no_service);
     }
 
     public void getSubResult(View view) throws RemoteException {
-        Log.d(TAG, "getSubResult: Called");
+        Log.d(TAG, "MainActivity: getSubResult: Called");
         if (bound) {
             result_id.setText(iCalcService.getResult("SUB"));
-        }
-        else result_id.setText(no_service);
+        } else result_id.setText(no_service);
     }
 
     public void getMulResult(View view) throws RemoteException {
-        Log.d(TAG, "getMulResult: Called");
+        Log.d(TAG, "MainActivity: getMulResult: Called");
         if (bound) {
             result_id.setText(iCalcService.getResult("MUL"));
-        }
-        else result_id.setText(no_service);
+        } else result_id.setText(no_service);
     }
 
     public void getDivResult(View view) throws RemoteException {
-        Log.d(TAG, "getDivResult: Called");
+        Log.d(TAG, "MainActivity: getDivResult: Called");
         if (bound) {
             result_id.setText(iCalcService.getResult("DIV"));
-        }
-        else result_id.setText(no_service);
+        } else result_id.setText(no_service);
     }
 }

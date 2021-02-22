@@ -13,21 +13,21 @@ public class CalcService extends Service {
     private Binder binder = new ICalcService.Stub() {
         @Override
         public boolean addCallback(ICalcServiceCallback callback) throws RemoteException {
-            Log.d(TAG, "addCallback: called");
+            Log.d(TAG, "CalcService: addCallback: called");
             mCallback = callback;
             return true;
         }
 
         @Override
         public boolean removeCallback() throws RemoteException {
-            Log.d(TAG, "removeCallback: called");
+            Log.d(TAG, "CalcService: removeCallback: called");
             mCallback = null;
             return true;
         }
 
         @Override
         public String getResult(String mode) throws RemoteException {
-            Log.d(TAG, "getResult: Called");
+            Log.d(TAG, "CalcService: getResult: Called");
             float[] inputs = mCallback.get_inputs();
             if (inputs == null) {
                 return "Check Inputs";
@@ -48,7 +48,7 @@ public class CalcService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        Log.d(TAG, "onBind: called");
+        Log.d(TAG, "CalcService: onBind: called");
         return binder;
     }
 }

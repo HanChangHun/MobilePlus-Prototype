@@ -1853,8 +1853,8 @@ public final class ActiveServices {
 
         ActivityServiceConnectionsHolder<ConnectionRecord> activity = null;
         if (token != null) {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 2");  // chun added
             activity = mAm.mAtmInternal.getServiceConnectionsHolder(token);
+	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 2: activity: " + activity);  // chun added
             if (activity == null) {
                 Slog.w(TAG, "Binding with unknown activity: " + token);
                 return 0;
@@ -1924,7 +1924,7 @@ public final class ActiveServices {
             retrieveServiceLocked(service, instanceName, resolvedType, callingPackage,
                     callingPid, callingUid, userId, true,
                     callerFg, isBindExternal, allowInstant);
-	Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 9");  // chun added
+	Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 9: res:" + res + " res.record: " + res.record);  // chun added
         if (res == null) {
             return 0;
         }
@@ -2014,7 +2014,7 @@ public final class ActiveServices {
         final long origId = Binder.clearCallingIdentity();
 
         try {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 13");  // chun added
+	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 13: origId: " + origId);  // chun added
             if (unscheduleServiceRestartLocked(s, callerApp.info.uid, false)) {
 	        Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 14");  // chun added
                 if (DEBUG_SERVICE) Slog.v(TAG_SERVICE, "BIND SERVICE WHILE RESTART PENDING: "
@@ -2028,6 +2028,7 @@ public final class ActiveServices {
                     // This is the first binding, let the tracker know.
                     ServiceState stracker = s.getTracker();
                     if (stracker != null) {
+			Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 16: stracker" + stracker);  // chun added
                         stracker.setBound(true, mAm.mProcessStats.getMemFactorLocked(),
                                 s.lastActivity);
                     }
@@ -2035,7 +2036,7 @@ public final class ActiveServices {
             }
 
             if ((flags & Context.BIND_RESTRICT_ASSOCIATIONS) != 0) {
-	        Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 16");  // chun added
+		Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 17");  // chun added
                 mAm.requireAllowedAssociationsLocked(s.appInfo.packageName);
             }
 
@@ -2052,7 +2053,8 @@ public final class ActiveServices {
                     connection, flags, clientLabel, clientIntent,
                     callerApp.uid, callerApp.processName, callingPackage);
 
-            IBinder binder = connection.asBinder();
+            IBinder binder = connection.asBinder();  // chun : asBinder()?!
+	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 18: binder" + binder);  // chun added
             s.addConnection(binder, c);
             b.connections.add(c);
             if (activity != null) {

@@ -15177,7 +15177,7 @@ public class ActivityManagerService extends IActivityManager.Stub
 			    " instanceName: " + instanceName + " callingPackage: " + callingPackage +
 			    " userId: " + userId);  // chun added
             return mServices.bindServiceLocked(caller, token, service,
-                    resolvedType, connection, flags, instanceName, callingPackage, userId);
+                    resolvedType, connection, flags, instanceName, callingPackage, userId);  // chun: bindServiceLocked!!
         }
     }
 

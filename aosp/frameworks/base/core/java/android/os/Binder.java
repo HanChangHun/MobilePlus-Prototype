@@ -1135,9 +1135,12 @@ public class Binder implements IBinder {
         // WorkSource the caller has set. Use calling uid as the default.
         final int callingUid = Binder.getCallingUid();
         final long origWorkSource = ThreadLocalWorkSource.setUid(callingUid);
+	Log.d(MY_TAG, "Binder: execTransact: 0: callingUid: " + callingUid + " origWorkSource: " + origWorkSource);  //chun added
         try {
+            Log.d(MY_TAG, "Binder: execTransact: 1");  //chun added
             return execTransactInternal(code, dataObj, replyObj, flags, callingUid);
         } finally {
+            Log.d(MY_TAG, "Binder: execTransact: 2");  //chun added
             ThreadLocalWorkSource.restore(origWorkSource);
         }
     }

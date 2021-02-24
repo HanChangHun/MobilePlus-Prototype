@@ -15148,19 +15148,19 @@ public class ActivityManagerService extends IActivityManager.Stub
 
         // Refuse possible leaked file descriptors
         if (service != null && service.hasFileDescriptors() == true) {
-	    Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 1");  // chun added
+            Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 1");  // chun added
             throw new IllegalArgumentException("File descriptors passed in Intent");
         }
 
         if (callingPackage == null) {
-	    Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 2");  // chun added
+            Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 2");  // chun added
             throw new IllegalArgumentException("callingPackage cannot be null");
         }
 
         // Ensure that instanceName, which is caller provided, does not contain
         // unusual characters.
         if (instanceName != null) {
-	    Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 3");  // chun added
+            Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 3");  // chun added
             for (int i = 0; i < instanceName.length(); ++i) {
                 char c = instanceName.charAt(i);
                 if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
@@ -15171,7 +15171,7 @@ public class ActivityManagerService extends IActivityManager.Stub
         }
 
         synchronized(this) {
-	    Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 4: caller: " +
+            Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 4: caller: " +
 			    caller + " token: " + token + " service: " + service + " resolvedType: " +
 			    resolvedType + " connection: " + connection + " flags: " + flags +
 			    " instanceName: " + instanceName + " callingPackage: " + callingPackage +

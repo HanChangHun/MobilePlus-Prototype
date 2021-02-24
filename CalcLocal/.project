@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>CalcLocal</name>
+	<name>SimpleCalc</name>
 	<comment>Project CalcLocal created by Buildship.</comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1613720620908</id>
+			<id>0</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

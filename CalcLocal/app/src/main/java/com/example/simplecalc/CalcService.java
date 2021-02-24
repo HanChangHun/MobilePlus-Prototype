@@ -55,6 +55,7 @@ public class CalcService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
+        Log.d(TAG, "CalcService: onBind: callingUid: " + Binder.getCallingUid());
         return binder;
     }
 }

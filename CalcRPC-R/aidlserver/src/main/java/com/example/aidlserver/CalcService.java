@@ -9,6 +9,7 @@ import android.util.Log;
 
 public class CalcService extends Service {
     String TAG = "201521037";
+
     ICalcServiceCallback mCallback;
     private Binder binder = new ICalcService.Stub() {
         @Override
@@ -48,7 +49,11 @@ public class CalcService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
+        int MY_UID = Binder.getCallingUid();
+
         Log.d(TAG, "CalcService: onBind: called");
+        if (MY_UID == 10135 || MY_UID == 10136) Log.d(TAG, "CalcService: onBind: callingUid: " + MY_UID);
+
         return binder;
     }
 }

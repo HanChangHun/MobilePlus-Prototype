@@ -4,6 +4,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
@@ -20,8 +21,8 @@ import com.example.aidlserver.ICalcService;
 import com.example.aidlserver.ICalcServiceCallback;
 
 public class MainActivity extends AppCompatActivity {
-
     String TAG = "201521037";
+
     String no_service = "No Service.";
     TextView result_id;
 
@@ -113,7 +114,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        int MY_UID = Binder.getCallingUid();
         Log.d(TAG, "MainActivity: onStart");
+        if (MY_UID == 10135 || MY_UID == 10136) Log.d(TAG, "onStart: " + MY_UID);
+
         if (!bound) {
             Intent intent = new Intent().setClassName("com.example.aidlserver",
                     "com.example.aidlserver.CalcService");

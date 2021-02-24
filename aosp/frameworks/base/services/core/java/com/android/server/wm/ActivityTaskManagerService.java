@@ -6667,16 +6667,20 @@ public class ActivityTaskManagerService extends IActivityTaskManager.Stub {
 
         @Override
         public ActivityServiceConnectionsHolder getServiceConnectionsHolder(IBinder token) {
-	    Log.d(MY_TAG, "ActivityTaskManagerService: getServiceConnectionsHolder: Called");
+            int MY_UID = Binder.getCallingUid();  //chun added
+            boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityTaskManagerService: getServiceConnectionsHolder: Called");  //chun added
+
             synchronized (mGlobalLock) {
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityTaskManagerService: getServiceConnectionsHolder: 0");  //chun added
+
                 final ActivityRecord r = ActivityRecord.isInStackLocked(token);
-	        Log.d(MY_TAG, "ActivityTaskManagerService: getServiceConnectionsHolder: 0");
                 if (r == null) {
-	            Log.d(MY_TAG, "ActivityTaskManagerService: getServiceConnectionsHolder: 1");
+                    if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityTaskManagerService: getServiceConnectionsHolder: 1");  //chun added
                     return null;
                 }
                 if (r.mServiceConnectionsHolder == null) {
-	            Log.d(MY_TAG, "ActivityTaskManagerService: getServiceConnectionsHolder: 2");
+                    if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityTaskManagerService: getServiceConnectionsHolder: 2");  //chun added
                     r.mServiceConnectionsHolder = new ActivityServiceConnectionsHolder(
                             ActivityTaskManagerService.this, r);
                 }

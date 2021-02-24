@@ -35,6 +35,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Binder;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -756,7 +757,10 @@ public class ContextWrapper extends Context {
     @Override
     public boolean bindService(Intent service, ServiceConnection conn,
             int flags) {
-	Log.d(MY_TAG, "ContextWrapper: bindService");  // chun:added
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ContextWrapper: bindService");  // chun:added
+
         return mBase.bindService(service, conn, flags);
     }
 

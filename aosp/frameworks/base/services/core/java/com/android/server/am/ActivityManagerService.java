@@ -3258,9 +3258,12 @@ public class ActivityManagerService extends IActivityManager.Stub
     }
 
     /* package */ void enforceNotIsolatedCaller(String caller) {
-	Log.d(MY_TAG,"ActivityManagerService: enforceNotIsolatedCaller: 0"); // chun added
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID +" ActivityManagerService: enforceNotIsolatedCaller: 0"); // chun added
+
         if (UserHandle.isIsolated(Binder.getCallingUid())) {
-	    Log.d(MY_TAG,"ActivityManagerService: enforceNotIsolatedCaller: 1"); // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID +" ActivityManagerService: enforceNotIsolatedCaller: 1"); // chun added
             throw new SecurityException("Isolated process not allowed to call " + caller);
         }
     }
@@ -15143,24 +15146,27 @@ public class ActivityManagerService extends IActivityManager.Stub
     public int bindIsolatedService(IApplicationThread caller, IBinder token, Intent service,
             String resolvedType, IServiceConnection connection, int flags, String instanceName,
             String callingPackage, int userId) throws TransactionTooLargeException {
-        Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 0");  // chun added
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityManagerService: bindIsolatedService: 0");  // chun added
+
         enforceNotIsolatedCaller("bindService");
 
         // Refuse possible leaked file descriptors
         if (service != null && service.hasFileDescriptors() == true) {
-            Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 1");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityManagerService: bindIsolatedService: 1");  // chun added
             throw new IllegalArgumentException("File descriptors passed in Intent");
         }
 
         if (callingPackage == null) {
-            Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 2");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityManagerService: bindIsolatedService: 2");  // chun added
             throw new IllegalArgumentException("callingPackage cannot be null");
         }
 
         // Ensure that instanceName, which is caller provided, does not contain
         // unusual characters.
         if (instanceName != null) {
-            Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 3");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityManagerService: bindIsolatedService: 3");  // chun added
             for (int i = 0; i < instanceName.length(); ++i) {
                 char c = instanceName.charAt(i);
                 if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
@@ -15171,7 +15177,7 @@ public class ActivityManagerService extends IActivityManager.Stub
         }
 
         synchronized(this) {
-            Log.d(MY_TAG, "ActivityManagerService: bindIsolatedService: 4: caller: " +
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityManagerService: bindIsolatedService: 4: caller: " +
 			    caller + " token: " + token + " service: " + service + " resolvedType: " +
 			    resolvedType + " connection: " + connection + " flags: " + flags +
 			    " instanceName: " + instanceName + " callingPackage: " + callingPackage +

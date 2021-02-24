@@ -14,45 +14,48 @@ public class CalcService extends Service {
     private Binder binder = new ICalcService.Stub() {
         @Override
         public boolean addCallback(ICalcServiceCallback callback) throws RemoteException {
-            Log.d(TAG, "CalcService: addCallback: called");
+            int MY_UID = Binder.getCallingUid();
+            Log.d(TAG, "UID: " + MY_UID + " CalcService: addCallback: called");
+
             mCallback = callback;
             return true;
         }
 
         @Override
         public boolean removeCallback() throws RemoteException {
-            Log.d(TAG, "CalcService: removeCallback: called");
+            int MY_UID = Binder.getCallingUid();
+            Log.d(TAG, "UID: " + MY_UID + " CalcService: removeCallback: called");
+
             mCallback = null;
             return true;
         }
 
         @Override
         public String getResult(String mode) throws RemoteException {
-            Log.d(TAG, "CalcService: getResult: Called");
+            int MY_UID = Binder.getCallingUid();
+            Log.d(TAG, "UID: " + MY_UID + " CalcService: getResult: Called");
+
             float[] inputs = mCallback.get_inputs();
             if (inputs == null) {
                 return "Check Inputs";
             }
-            if (mode.equals("ADD")) {
+            if ("ADD".equals(mode)) {
                 return Float.toString(inputs[0] + inputs[1]);
-            } else if (mode.equals("SUB")) {
+            } else if ("SUB".equals(mode)) {
                 return Float.toString(inputs[0] - inputs[1]);
-            } else if (mode.equals("MUL")) {
+            } else if ("MUL".equals(mode)) {
                 return Float.toString(inputs[0] * inputs[1]);
-            } else if (mode.equals("DIV")) {
+            } else if ("DIV".equals(mode)) {
                 return Float.toString(inputs[0] / inputs[1]);
-            } else {
-                return "Error!";
             }
+            return "Error!";
         }
     };
 
     @Override
     public IBinder onBind(Intent intent) {
         int MY_UID = Binder.getCallingUid();
-
-        Log.d(TAG, "CalcService: onBind: called");
-        if (MY_UID == 10135 || MY_UID == 10136) Log.d(TAG, "CalcService: onBind: callingUid: " + MY_UID);
+        Log.d(TAG, "UID: " + MY_UID + " CalcService: onBind: MY_UID: " + MY_UID);
 
         return binder;
     }

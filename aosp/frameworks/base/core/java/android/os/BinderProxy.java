@@ -43,8 +43,8 @@ import java.util.Map;
  * @hide
  */
 public final class BinderProxy implements IBinder {
-    String MY_TAG = "201521037";
-    
+    String MY_TAG = "201521037";  // chun added
+
     // See android_util_Binder.cpp for the native half of this.
 
     // Assume the process-wide default value when created
@@ -495,8 +495,10 @@ public final class BinderProxy implements IBinder {
      * @throws RemoteException
      */
     public boolean transact(int code, Parcel data, Parcel reply, int flags) throws RemoteException {
-        int MY_UID = Binder.getCallingUid();
-        if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "BinderProxy: transact: 0");  //chun added
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " BinderProxy: transact: 0");  //chun added
+
         Binder.checkParcel(this, code, data, "Unreasonably large binder buffer");
 
         if (mWarnOnBlocking && ((flags & FLAG_ONEWAY) == 0)

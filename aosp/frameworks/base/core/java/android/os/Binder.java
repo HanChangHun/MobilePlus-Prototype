@@ -77,7 +77,7 @@ import java.lang.reflect.Modifier;
  */
 public class Binder implements IBinder {
     static final String MY_TAG = "201521037";  // chun added
-    
+
     /*
      * Set this flag to true to detect anonymous, local or member classes
      * that extend this Binder class and that are not static. These kind
@@ -784,18 +784,20 @@ public class Binder implements IBinder {
      */
     protected boolean onTransact(int code, @NonNull Parcel data, @Nullable Parcel reply,
             int flags) throws RemoteException {
-        int MY_UID = Binder.getCallingUid();
-        if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 0: start!!");  // chun added
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG =  (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 0: start!!");  // chun added
+
         if (code == INTERFACE_TRANSACTION) {
-            if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 1: INTERFACE_TRANSACTION: " + INTERFACE_TRANSACTION);  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 1: INTERFACE_TRANSACTION: " + INTERFACE_TRANSACTION);  // chun added
             reply.writeString(getInterfaceDescriptor());
             return true;
         } else if (code == DUMP_TRANSACTION) {
-            if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 2: DUMP_TRANSACTION: " + DUMP_TRANSACTION);  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 2: DUMP_TRANSACTION: " + DUMP_TRANSACTION);  // chun added
             ParcelFileDescriptor fd = data.readFileDescriptor();
             String[] args = data.readStringArray();
             if (fd != null) {
-                if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 3: fd: " + fd);  // chun added
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 3: fd: " + fd);  // chun added
                 try {
                     dump(fd.getFileDescriptor(), args);
                 } finally {
@@ -804,15 +806,15 @@ public class Binder implements IBinder {
             }
             // Write the StrictMode header.
             if (reply != null) {
-                if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 4: reply: " + reply);  // chun added
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 4: reply: " + reply);  // chun added
                 reply.writeNoException();
             } else {
-                if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 5: reply == null");  // chun added
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 5: reply == null");  // chun added
                 StrictMode.clearGatheredViolations();
             }
             return true;
         } else if (code == SHELL_COMMAND_TRANSACTION) {
-            if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: " + SHELL_COMMAND_TRANSACTION);  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 6: SHELL_COMMAND_TRANSACTION: " + SHELL_COMMAND_TRANSACTION);  // chun added
             ParcelFileDescriptor in = data.readFileDescriptor();
             ParcelFileDescriptor out = data.readFileDescriptor();
             ParcelFileDescriptor err = data.readFileDescriptor();
@@ -821,29 +823,29 @@ public class Binder implements IBinder {
             ResultReceiver resultReceiver = ResultReceiver.CREATOR.createFromParcel(data);
             try {
                 if (out != null) {
-                    if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 7: out: " + out);  // chun added
+                    if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 7: out: " + out);  // chun added
                     shellCommand(in != null ? in.getFileDescriptor() : null,
                             out.getFileDescriptor(),
                             err != null ? err.getFileDescriptor() : out.getFileDescriptor(),
                             args, shellCallback, resultReceiver);
                 }
             } finally {
-                if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 8");  // chun added
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 8");  // chun added
                 IoUtils.closeQuietly(in);
                 IoUtils.closeQuietly(out);
                 IoUtils.closeQuietly(err);
                 // Write the StrictMode header.
                 if (reply != null) {
-                    if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 9: reply: " + reply);  // chun added
+                    if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 9: reply: " + reply);  // chun added
                     reply.writeNoException();
                 } else {
-                    if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 10: reply== null");  // chun added
+                    if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 10: reply== null");  // chun added
                     StrictMode.clearGatheredViolations();
                 }
             }
             return true;
         }
-        if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 11: end");  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: onTransact: 11: end");  // chun added
         return false;
     }
 
@@ -1051,18 +1053,19 @@ public class Binder implements IBinder {
      */
     public final boolean transact(int code, @NonNull Parcel data, @Nullable Parcel reply,
             int flags) throws RemoteException {
-        int MY_UID = Binder.getCallingUid();
-        if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: transact: 0: code: " + code + ", flags: " + flags);  // chun added
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: transact: 0: code: " + code + ", flags: " + flags);  // chun added
         if (false) Log.v("Binder", "Transact: " + code + " to " + this);
 
         if (data != null) {
             data.setDataPosition(0);
-            if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: transact: 1: data: " + data);  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: transact: 1: data: " + data);  // chun added
         }
         boolean r = onTransact(code, data, reply, flags);  // chun: onTransact!!
         if (reply != null) {
             reply.setDataPosition(0);
-            if (MY_UID == 10135 || MY_UID == 10136) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: transact: 2: reply: " + reply);  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " Binder: transact: 2: reply: " + reply);  // chun added
         }
         return r;
     }
@@ -1135,7 +1138,6 @@ public class Binder implements IBinder {
     @UnsupportedAppUsage
     private boolean execTransact(int code, long dataObj, long replyObj,
             int flags) {
-        
         // At that point, the parcel request headers haven't been parsed so we do not know what
         // WorkSource the caller has set. Use calling uid as the default.
         final int callingUid = Binder.getCallingUid();

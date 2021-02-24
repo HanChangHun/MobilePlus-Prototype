@@ -1836,7 +1836,10 @@ public final class ActiveServices {
             String resolvedType, final IServiceConnection connection, int flags,
             String instanceName, String callingPackage, final int userId)
             throws TransactionTooLargeException {
-	Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 0");  // chun added
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 0");  // chun added
+
         if (DEBUG_SERVICE) Slog.v(TAG_SERVICE, "bindService: " + service
                 + " type=" + resolvedType + " conn=" + connection.asBinder()
                 + " flags=0x" + Integer.toHexString(flags));
@@ -1844,7 +1847,7 @@ public final class ActiveServices {
         final int callingUid = Binder.getCallingUid();
         final ProcessRecord callerApp = mAm.getRecordForAppLocked(caller);
         if (callerApp == null) {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 1");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 1");  // chun added
             throw new SecurityException(
                     "Unable to find app for caller " + caller
                     + " (pid=" + callingPid
@@ -1853,9 +1856,12 @@ public final class ActiveServices {
 
         ActivityServiceConnectionsHolder<ConnectionRecord> activity = null;
         if (token != null) {
-            activity = mAm.mAtmInternal.getServiceConnectionsHolder(token);
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 2: activity: " + activity);  // chun added
+            activity = mAm.mAtmInternal.getServiceConnectionsHolder(token);  // chun: getServiceConnectionsHolder...
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 2: activity: " + activity);  // chun added
+
             if (activity == null) {
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 2.1");  // chun added
+
                 Slog.w(TAG, "Binding with unknown activity: " + token);
                 return 0;
             }
@@ -1866,7 +1872,7 @@ public final class ActiveServices {
         final boolean isCallerSystem = callerApp.info.uid == Process.SYSTEM_UID;
 
         if (isCallerSystem) {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 3");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 3");  // chun added
             // Hacky kind of thing -- allow system stuff to tell us
             // what they are, so we can report this elsewhere for
             // others to know why certain services are running.
@@ -1884,33 +1890,33 @@ public final class ActiveServices {
         }
 
         if ((flags&Context.BIND_TREAT_LIKE_ACTIVITY) != 0) {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 4");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 4");  // chun added
             mAm.enforceCallingPermission(android.Manifest.permission.MANAGE_ACTIVITY_STACKS,
                     "BIND_TREAT_LIKE_ACTIVITY");
         }
 
         if ((flags & Context.BIND_SCHEDULE_LIKE_TOP_APP) != 0 && !isCallerSystem) {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 5");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 5");  // chun added
             throw new SecurityException("Non-system caller (pid=" + callingPid
                     + ") set BIND_SCHEDULE_LIKE_TOP_APP when binding service " + service);
         }
 
         if ((flags & Context.BIND_ALLOW_WHITELIST_MANAGEMENT) != 0 && !isCallerSystem) {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 6");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 6");  // chun added
             throw new SecurityException(
                     "Non-system caller " + caller + " (pid=" + callingPid
                     + ") set BIND_ALLOW_WHITELIST_MANAGEMENT when binding service " + service);
         }
 
         if ((flags & Context.BIND_ALLOW_INSTANT) != 0 && !isCallerSystem) {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 7");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 7");  // chun added
             throw new SecurityException(
                     "Non-system caller " + caller + " (pid=" + callingPid
                             + ") set BIND_ALLOW_INSTANT when binding service " + service);
         }
 
         if ((flags & Context.BIND_ALLOW_BACKGROUND_ACTIVITY_STARTS) != 0) {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 8");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 8");  // chun added
             mAm.enforceCallingPermission(
                     android.Manifest.permission.START_ACTIVITIES_FROM_BACKGROUND,
                     "BIND_ALLOW_BACKGROUND_ACTIVITY_STARTS");
@@ -1924,7 +1930,9 @@ public final class ActiveServices {
             retrieveServiceLocked(service, instanceName, resolvedType, callingPackage,
                     callingPid, callingUid, userId, true,
                     callerFg, isBindExternal, allowInstant);
-	Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 9: res:" + res + " res.record: " + res.record);  // chun added
+
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 9: res:" + res + " res.record: " + res.record);  // chun added
+
         if (res == null) {
             return 0;
         }
@@ -1940,7 +1948,7 @@ public final class ActiveServices {
         // when done to start the bound service's process to completing the binding.
         if (mAm.getPackageManagerInternalLocked().isPermissionsReviewRequired(
                 s.packageName, s.userId)) {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 10");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 10");  // chun added
 
             permissionsReviewRequired = true;
 
@@ -1995,10 +2003,10 @@ public final class ActiveServices {
                     | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
             intent.putExtra(Intent.EXTRA_PACKAGE_NAME, s.packageName);
             intent.putExtra(Intent.EXTRA_REMOTE_CALLBACK, callback);
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 11");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 11");  // chun added
 
             if (DEBUG_PERMISSIONS_REVIEW) {
-	        Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 12");  // chun added
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 12");  // chun added
                 Slog.i(TAG, "u" + s.userId + " Launching permission review for package "
                         + s.packageName);
             }
@@ -2014,21 +2022,21 @@ public final class ActiveServices {
         final long origId = Binder.clearCallingIdentity();
 
         try {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 13: origId: " + origId);  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 13: origId: " + origId);  // chun added
             if (unscheduleServiceRestartLocked(s, callerApp.info.uid, false)) {
-	        Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 14");  // chun added
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 14");  // chun added
                 if (DEBUG_SERVICE) Slog.v(TAG_SERVICE, "BIND SERVICE WHILE RESTART PENDING: "
                         + s);
             }
 
             if ((flags&Context.BIND_AUTO_CREATE) != 0) {
-	        Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 15");  // chun added
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 15");  // chun added
                 s.lastActivity = SystemClock.uptimeMillis();
                 if (!s.hasAutoCreateConnections()) {
                     // This is the first binding, let the tracker know.
                     ServiceState stracker = s.getTracker();
                     if (stracker != null) {
-			Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 16: stracker" + stracker);  // chun added
+                        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 16: stracker" + stracker);  // chun added
                         stracker.setBound(true, mAm.mProcessStats.getMemFactorLocked(),
                                 s.lastActivity);
                     }
@@ -2036,7 +2044,7 @@ public final class ActiveServices {
             }
 
             if ((flags & Context.BIND_RESTRICT_ASSOCIATIONS) != 0) {
-		Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 17");  // chun added
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 17");  // chun added
                 mAm.requireAllowedAssociationsLocked(s.appInfo.packageName);
             }
 
@@ -2054,7 +2062,7 @@ public final class ActiveServices {
                     callerApp.uid, callerApp.processName, callingPackage);
 
             IBinder binder = connection.asBinder();  // chun : asBinder()?!
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 18: binder" + binder);  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 18: binder" + binder);  // chun added
             s.addConnection(binder, c);
             b.connections.add(c);
             if (activity != null) {
@@ -2143,7 +2151,7 @@ public final class ActiveServices {
             getServiceMapLocked(s.userId).ensureNotStartingBackgroundLocked(s);
 
         } finally {
-	    Log.d(MY_TAG, "ActiveServices: bindServiceLocked: 17");  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 17");  // chun added
             Binder.restoreCallingIdentity(origId);
         }
 

@@ -181,7 +181,7 @@ class ReceiverRestrictedContext extends ContextWrapper {
  */
 class ContextImpl extends Context {
     private final static String TAG = "ContextImpl";
-    private final static String MY_TAG = "201521037"; // chun added
+    private final static String MY_TAG = "201521037";  // chun added
     private final static boolean DEBUG = false;
 
     private static final String XATTR_INODE_CACHE = "user.inode_cache";
@@ -1653,16 +1653,20 @@ class ContextImpl extends Context {
     }
 
     private void validateServiceIntent(Intent service) {
-	Log.d(MY_TAG, "ContextImpl: validateServiceIntent: 0"); // chun added
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID + " ContextImpl: validateServiceIntent: 0");  // chun added
+
         if (service.getComponent() == null && service.getPackage() == null) {
-	    Log.d(MY_TAG, "ContextImpl: validateServiceIntent: 1"); // chun added
+            if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID + " ContextImpl: validateServiceIntent: 1");  // chun added
+
             if (getApplicationInfo().targetSdkVersion >= Build.VERSION_CODES.LOLLIPOP) {
-	        Log.d(MY_TAG, "ContextImpl: validateServiceIntent: 2"); // chun added
+                if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID + " ContextImpl: validateServiceIntent: 2");  // chun added
                 IllegalArgumentException ex = new IllegalArgumentException(
                         "Service Intent must be explicit: " + service);
                 throw ex;
             } else {
-	        Log.d(MY_TAG, "ContextImpl: validateServiceIntent: 3"); // chun added
+                if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID + " ContextImpl: validateServiceIntent: 3");  // chun added
                 Log.w(TAG, "Implicit intents with startService are not safe: " + service
                         + " " + Debug.getCallers(2, 3));
             }
@@ -1750,7 +1754,10 @@ class ContextImpl extends Context {
 
     @Override
     public boolean bindService(Intent service, ServiceConnection conn, int flags) {
-	Log.d(MY_TAG, "ContextImpl: bindService");  // chun added
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID +" ContextImpl: bindService");  // chun added
+
         warnIfCallingFromSystemProcess();
         return bindServiceCommon(service, conn, flags, null, mMainThread.getHandler(), null,
                 getUser());
@@ -1810,9 +1817,12 @@ class ContextImpl extends Context {
 
     private boolean bindServiceCommon(Intent service, ServiceConnection conn, int flags,
             String instanceName, Handler handler, Executor executor, UserHandle user) {
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
+
         // Keep this in sync with DevicePolicyManager.bindDeviceAdminServiceAsUser.
-        Log.d(MY_TAG,"ContextImpl: bindServiceCommon: 0: mPackageInfo: " + mPackageInfo); // chun added
-        IServiceConnection sd;
+        if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID  + " ContextImpl: bindServiceCommon: 0: mPackageInfo: " + mPackageInfo + " getOuterContext(): " + getOuterContext());  // chun added
+        IServiceConnection sd;  // chun: service dispatcher...
         if (conn == null) {
             throw new IllegalArgumentException("connection is null");
         }
@@ -1822,30 +1832,30 @@ class ContextImpl extends Context {
         if (mPackageInfo != null) {
             if (executor != null) {
                 sd = mPackageInfo.getServiceDispatcher(conn, getOuterContext(), executor, flags);
-                Log.d(MY_TAG,"ContextImpl: bindServiceCommon: 1: executor!=null " + sd); // chun added
+                if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID  + " ContextImpl: bindServiceCommon: 1: executor!=null " + sd);  // chun added
             } else {
                 sd = mPackageInfo.getServiceDispatcher(conn, getOuterContext(), handler, flags);
-                Log.d(MY_TAG,"ContextImpl: bindServiceCommon: 2: executor==null " + sd); // chun added
+                if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID  + " ContextImpl: bindServiceCommon: 2: executor==null " + sd);  // chun added
             }
         } else {
             throw new RuntimeException("Not supported in system context");
         }
         validateServiceIntent(service);
         try {
-            Log.d(MY_TAG,"ContextImpl: bindServiceCommon: 3"); // chun added
+            if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID  + " ContextImpl: bindServiceCommon: 3");  // chun added
             IBinder token = getActivityToken();  // chun: getActivityToken...
             if (token == null && (flags&BIND_AUTO_CREATE) == 0 && mPackageInfo != null
                     && mPackageInfo.getApplicationInfo().targetSdkVersion
                     < android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
                 flags |= BIND_WAIVE_PRIORITY;
-                Log.d(MY_TAG,"ContextImpl: bindServiceCommon: 4: in if token == null"); // chun added
+                if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID  + " ContextImpl: bindServiceCommon: 4: in if token == null");  // chun added
             }
             service.prepareToLeaveProcess(this);
             int res = ActivityManager.getService().bindIsolatedService(
                 mMainThread.getApplicationThread(), getActivityToken(), service,
                 service.resolveTypeIfNeeded(getContentResolver()),
-                sd, flags, instanceName, getOpPackageName(), user.getIdentifier());  // chun: bindIsolatedService
-            Log.d(MY_TAG,"ContextImpl: bindServiceCommon: 5: res: " + res); // chun added
+                sd, flags, instanceName, getOpPackageName(), user.getIdentifier());  // chun: bindIsolatedService, mMainThread... 
+            if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID  + " ContextImpl: bindServiceCommon: 5: res: " + res);  // chun added
             if (res < 0) {
                 throw new SecurityException(
                         "Not allowed to bind to service " + service);

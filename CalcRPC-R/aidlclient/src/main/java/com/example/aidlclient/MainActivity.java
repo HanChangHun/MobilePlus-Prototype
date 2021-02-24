@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private final ICalcServiceCallback callback = new ICalcServiceCallback.Stub() {
         @Override
         public float[] get_inputs() {
-            Log.d(TAG, "MainActivity: callback: get_inputs: Called");
+            int MY_UID = Binder.getCallingUid();
+            Log.d(TAG, "UID: " + MY_UID + " MainActivity: callback: get_inputs: Called");
             float[] inputs = new float[2];
 
             EditText input1_id = findViewById(R.id.input1_id);
@@ -51,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
     private final ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            Log.d(TAG, "MainActivity: onServiceConnected: Called");
+            int MY_UID = Binder.getCallingUid();
+            Log.d(TAG, "UID: " + MY_UID + " MainActivity: onServiceConnected: Called");
             iCalcService = ICalcService.Stub.asInterface(service);
             try {
                 iCalcService.addCallback(callback);
@@ -59,12 +61,13 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             bound = true;
-            Log.d(TAG, "MainActivity: onServiceConnected: iCalcService: " + iCalcService);
+            Log.d(TAG, "UID: " + MY_UID + " MainActivity: onServiceConnected: iCalcService: " + iCalcService);
         }
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Log.d(TAG, "MainActivity: onServiceDisconnected: Called");
+            int MY_UID = Binder.getCallingUid();
+            Log.d(TAG, "UID: " + MY_UID + " MainActivity: onServiceDisconnected: Called");
             iCalcService = null;
             bound = false;
         }
@@ -73,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d(TAG, "MainActivity: onCreate");
+        int MY_UID = Binder.getCallingUid();
+        Log.d(TAG, "UID: " + MY_UID + " MainActivity: onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         result_id = findViewById(R.id.result_id);
@@ -82,12 +86,13 @@ public class MainActivity extends AppCompatActivity {
         bindButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "MainActivity: onCreate: onClick: bindButton");
+                int MY_UID = Binder.getCallingUid();
+                Log.d(TAG, "UID: " + MY_UID + " MainActivity: onCreate: onClick: bindButton");
                 if (!bound) {
                     Intent intent = new Intent().setClassName("com.example.aidlserver",
                             "com.example.aidlserver.CalcService");
                     boolean isBind = bindService(intent, connection, Context.BIND_AUTO_CREATE);
-                    Log.d(TAG, "MainActivity: onCreate: isBind: " + isBind);
+                    Log.d(TAG, "UID: " + MY_UID + " MainActivity: onCreate: isBind: " + isBind);
                 }
             }
         });
@@ -96,7 +101,8 @@ public class MainActivity extends AppCompatActivity {
         unbindButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "MainActivity: onCreate: onClick: unbindButton");
+                int MY_UID = Binder.getCallingUid();
+                Log.d(TAG, "UID: " + MY_UID + " MainActivity: onCreate: onClick: unbindButton");
                 if (bound) {
                     unbindService(connection);
                     bound = false;
@@ -105,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                     } catch (RemoteException e) {
                         e.printStackTrace();
                     }
-                    Log.d(TAG, "MainActivity: onCreate: bound: " + bound);
+                    Log.d(TAG, "UID: " + MY_UID + " MainActivity: onCreate: bound: " + bound);
                 }
             }
         });
@@ -116,21 +122,21 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         int MY_UID = Binder.getCallingUid();
-        Log.d(TAG, "MainActivity: onStart");
-        if (MY_UID == 10135 || MY_UID == 10136) Log.d(TAG, "onStart: " + MY_UID);
+        Log.d(TAG, "UID: " + MY_UID + " MainActivity: onStart: MY_UID: " + MY_UID);
 
         if (!bound) {
             Intent intent = new Intent().setClassName("com.example.aidlserver",
                     "com.example.aidlserver.CalcService");
             boolean isBind = bindService(intent, connection, Context.BIND_AUTO_CREATE);
-            Log.d(TAG, "MainActivity: onStart: isBind: " + isBind);
+            Log.d(TAG, "UID: " + MY_UID + " MainActivity: onStart: isBind: " + isBind);
         }
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "MainActivity: onStop");
+        int MY_UID = Binder.getCallingUid();
+        Log.d(TAG, "UID: " + MY_UID + " MainActivity: onStop");
         if (bound) {
             try {
                 iCalcService.removeCallback();
@@ -139,34 +145,38 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             unbindService(connection);
-            Log.d(TAG, "MainActivity: onStop: bound: " + bound);
+            Log.d(TAG, "UID: " + MY_UID + " MainActivity: onStop: bound: " + bound);
         }
     }
 
 
     public void getAddResult(View view) throws RemoteException {
-        Log.d(TAG, "MainActivity: getAddResult: Called");
+        int MY_UID = Binder.getCallingUid();
+        Log.d(TAG, "UID: " + MY_UID + " MainActivity: getAddResult: Called");
         if (bound) {
             result_id.setText(iCalcService.getResult("ADD"));
         } else result_id.setText(no_service);
     }
 
     public void getSubResult(View view) throws RemoteException {
-        Log.d(TAG, "MainActivity: getSubResult: Called");
+        int MY_UID = Binder.getCallingUid();
+        Log.d(TAG, "UID: " + MY_UID + " MainActivity: getSubResult: Called");
         if (bound) {
             result_id.setText(iCalcService.getResult("SUB"));
         } else result_id.setText(no_service);
     }
 
     public void getMulResult(View view) throws RemoteException {
-        Log.d(TAG, "MainActivity: getMulResult: Called");
+        int MY_UID = Binder.getCallingUid();
+        Log.d(TAG, "UID: " + MY_UID + " MainActivity: getMulResult: Called");
         if (bound) {
             result_id.setText(iCalcService.getResult("MUL"));
         } else result_id.setText(no_service);
     }
 
     public void getDivResult(View view) throws RemoteException {
-        Log.d(TAG, "MainActivity: getDivResult: Called");
+        int MY_UID = Binder.getCallingUid();
+        Log.d(TAG, "UID: " + MY_UID + " MainActivity: getDivResult: Called");
         if (bound) {
             result_id.setText(iCalcService.getResult("DIV"));
         } else result_id.setText(no_service);

@@ -21,6 +21,8 @@ import static com.android.server.wm.ActivityStack.ActivityState.RESUMED;
 import static com.android.server.wm.ActivityTaskManagerDebugConfig.DEBUG_CLEANUP;
 import static com.android.server.wm.ActivityTaskManagerDebugConfig.TAG_ATM;
 
+import android.os.Binder;  // chun added
+
 import android.util.ArraySet;
 import android.util.Slog;
 
@@ -40,7 +42,7 @@ import java.util.function.Consumer;
  */
 public class ActivityServiceConnectionsHolder<T> {
 
-    String MY_TAG = "201521037";
+    String MY_TAG = "201521037";  // chun added
     private final ActivityTaskManagerService mService;
 
     /** The activity the owns this service connection object. */
@@ -64,10 +66,12 @@ public class ActivityServiceConnectionsHolder<T> {
 
     /** Adds a connection record that the activity has bound to a specific service. */
     public void addConnection(T c) {
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
         synchronized (mService.mGlobalLock) {
-Log.d(MY_TAG, "ActivityServiceConnectionsHolder: addConnection: 0: c: " + c + " mConnections: " + mConnections); // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityServiceConnectionsHolder: addConnection: 0: c: " + c + " mConnections: " + mConnections); // chun added
             if (mIsDisconnecting) {
-		Log.d(MY_TAG, "ActivityServiceConnectionsHolder: addConnection: 1:mIsDisconnecting: " + mIsDisconnecting);  //chun added
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityServiceConnectionsHolder: addConnection: 1:mIsDisconnecting: " + mIsDisconnecting);  //chun added
                 // This is unlikely to happen because the caller should create a new holder.
                 if (DEBUG_CLEANUP) {
                     Slog.e(TAG_ATM, "Skip adding connection " + c + " to a disconnecting holder of "
@@ -76,7 +80,7 @@ Log.d(MY_TAG, "ActivityServiceConnectionsHolder: addConnection: 0: c: " + c + " 
                 return;
             }
             if (mConnections == null) {
-		Log.d(MY_TAG, "ActivityServiceConnectionsHolder: addConnection: 2");  // chun added
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityServiceConnectionsHolder: addConnection: 2");  // chun added
                 mConnections = new ArraySet<>();
             }
             mConnections.add(c);

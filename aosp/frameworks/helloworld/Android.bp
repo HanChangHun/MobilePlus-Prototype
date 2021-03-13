@@ -1,0 +1,81 @@
+cc_library {
+
+    name: "libhelloworld",
+
+    srcs: [
+	"lib/helloworld/BnHelloWorldService.cpp",
+	"lib/helloworld/BpHelloWorldService.cpp",
+	"lib/helloworld/HelloWorldService.cpp",
+	"lib/helloworld/IHelloWorldService.cpp",
+    ],
+
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "liblog",
+        "libbinder",
+    ],
+
+    local_include_dirs: [
+        "include"
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Wno-unused-parameter",
+        "-Wno-unused-variable",
+    ],
+
+}
+
+cc_binary {
+
+    name: "main_helloworldclient",
+
+    srcs: ["cmds/main_helloworldclient.cpp"],
+
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libbinder",
+        "liblog",
+        "libhelloworld",
+    ],
+
+    local_include_dirs: [
+        "include"
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Wno-unused-parameter",
+        "-Wno-unused-variable",
+    ],
+
+}
+
+cc_binary {
+
+    name: "main_helloworldservice",
+
+    srcs: ["cmds/main_helloworldservice.cpp"],
+
+    shared_libs: [
+        "libcutils",
+        "libutils",
+        "libbinder",
+        "liblog",
+        "libhelloworld",
+    ],
+
+    local_include_dirs: [
+        "include"
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Wno-unused-parameter",
+        "-Wno-unused-variable",
+    ],
+
+}

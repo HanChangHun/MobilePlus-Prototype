@@ -1,7 +1,7 @@
 #!/bin/bash
 # update git repository from local asop
-SRC_DIR=/hdd_ext/hdd4000/chun/source/mobile_plus/frameworks
-DST_DIR=~/AndroidStudioProjects/MobilePlus-Prototype/aosp/frameworks
+SRC_DIR=~/workspace/android-11.0.0_r27/frameworks
+DST_DIR=~/workspace/MobilePlus-Prototype/aosp/frameworks
 
 rsync -au ${SRC_DIR}/base/core ${DST_DIR}/base
 rsync -au ${SRC_DIR}/base/services ${DST_DIR}/base

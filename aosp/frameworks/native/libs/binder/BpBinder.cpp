@@ -209,6 +209,9 @@ status_t BpBinder::dump(int fd, const Vector<String16>& args)
     return err;
 }
 
+// chun: intercept start
+// chun: intercept end
+
 // NOLINTNEXTLINE(google-default-arguments)
 status_t BpBinder::transact(
     uint32_t code, const Parcel& data, Parcel* reply, uint32_t flags)
@@ -233,6 +236,9 @@ status_t BpBinder::transact(
                 return BAD_TYPE;
             }
         }
+
+        //chun: intercept start
+        //chun: intercept end
 
         status_t status = IPCThreadState::self()->transact(
             mHandle, code, data, reply, flags);

@@ -23,7 +23,18 @@
 #include <utils/threads.h>
 
 #include <unordered_map>
+// chun: intercept start
+#include <binder/IServiceManager.h>
 
+#define CHECK_SERVICE_FLAG              0
+#define NOT_TARGET                     -1
+
+#define SERVICE_MANAGER_HANDLE			0
+#define GET_SERVICE_TRANSACTION			1
+#define CHECK_SERVICE_TRANSACTION		2
+#define ADD_SERVICE_TRANSACTION			3
+#define LIST_SERVICES_TRANSACTION		4
+// chun: intercept end
 // ---------------------------------------------------------------------------
 namespace android {
 

@@ -308,6 +308,8 @@ constexpr const char* const kManualInterfaces[] = {
   "IAAudioClient",
   "IAAudioService",
   "VtsFuzzer",
+  "android.app.HelloWorldService",
+  "android.helloworld.IHelloWorldService",
   nullptr,
 };
 

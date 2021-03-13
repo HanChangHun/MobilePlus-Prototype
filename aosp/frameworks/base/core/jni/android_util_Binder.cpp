@@ -727,7 +727,7 @@ struct BinderProxyNativeData {
 };
 
 BinderProxyNativeData* getBPNativeData(JNIEnv* env, jobject obj) {
-    return (BinderProxyNativeData *) env->GetLongField(obj, gBinderProxyOffsets.mNativeData);
+    return (BinderProxyNativeData *) env->GetLongField(obj, gBinderProxyOffsets.mNativeData); // BpBinder?
 }
 
 // If the argument is a JavaBBinder, return the Java object that was used to create it.

@@ -1838,7 +1838,7 @@ public final class ActiveServices {
             throws TransactionTooLargeException {
         int MY_UID = Binder.getCallingUid();  // chun added
         boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
-        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 0");  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 0: service: " + service + " resolvedType: " + resolvedType + " conn=" + connection.asBinder() + " flags=0x" + Integer.toHexString(flags));  // chun added
 
         if (DEBUG_SERVICE) Slog.v(TAG_SERVICE, "bindService: " + service
                 + " type=" + resolvedType + " conn=" + connection.asBinder()
@@ -2062,9 +2062,11 @@ public final class ActiveServices {
                     callerApp.uid, callerApp.processName, callingPackage);
 
             IBinder binder = connection.asBinder();  // chun : asBinder()?!
-            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 18: binder" + binder);  // chun added
             s.addConnection(binder, c);
             b.connections.add(c);
+
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActiveServices: bindServiceLocked: 18: binder" + binder);  // chun added
+
             if (activity != null) {
                 activity.addConnection(c);
             }

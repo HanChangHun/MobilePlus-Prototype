@@ -467,6 +467,7 @@ import java.util.function.Supplier;
  */
 public class PackageManagerService extends IPackageManager.Stub
         implements PackageSender {
+    static final String MY_TAG = "201521037";  // chun added
     static final String TAG = "PackageManager";
     public static final boolean DEBUG_SETTINGS = false;
     static final boolean DEBUG_PREFERRED = false;
@@ -24610,17 +24611,27 @@ public class PackageManagerService extends IPackageManager.Stub
         @Override
         public void grantImplicitAccess(int userId, Intent intent,
                 int recipientAppId, int visibleUid, boolean direct) {
+            int MY_UID = Binder.getCallingUid();  // chun added
+            boolean MY_FLAG =  (MY_UID == 10135 || MY_UID == 10136);  // chun added
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + "PackageManagerService: grantImplicitAccess: userId: " + userId + " intent: " + intent + " recipientAppId: " + recipientAppId + " visibleUid: " + visibleUid + " direct: " + direct);  // chun added
+
             synchronized (mLock) {
                 final AndroidPackage visiblePackage = getPackage(visibleUid);
                 final int recipientUid = UserHandle.getUid(userId, recipientAppId);
+
+                if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + "PackageManagerService: grantImplicitAccess: 0: visiblePackage: " + visiblePackage + " recipientUid: " + recipientUid);  // chun added
+
                 if (visiblePackage == null || getPackage(recipientUid) == null) {
+                    if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + "PackageManagerService: grantImplicitAccess: 1");  // chun added
                     return;
                 }
 
                 final boolean instantApp =
                         isInstantAppInternal(visiblePackage.getPackageName(), userId, visibleUid);
                 if (instantApp) {
+                    if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + "PackageManagerService: grantImplicitAccess: 2: instantApp: " + instantApp); // chun added
                     if (!direct) {
+                        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + "PackageManagerService: grantImplicitAccess: 3");  // chun added
                         // if the interaction that lead to this granting access to an instant app
                         // was indirect (i.e.: URI permission grant), do not actually execute the
                         // grant.
@@ -24629,6 +24640,7 @@ public class PackageManagerService extends IPackageManager.Stub
                     mInstantAppRegistry.grantInstantAccessLPw(userId, intent,
                             recipientAppId, UserHandle.getAppId(visibleUid) /*instantAppId*/);
                 } else {
+                    if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + "PackageManagerService: grantImplicitAccess: 4");  // chun added
                     mAppsFilter.grantImplicitAccess(recipientUid, visibleUid);
                 }
             }

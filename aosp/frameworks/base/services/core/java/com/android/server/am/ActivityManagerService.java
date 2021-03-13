@@ -2835,7 +2835,12 @@ public class ActivityManagerService extends IActivityManager.Stub
     @Override
     public boolean onTransact(int code, Parcel data, Parcel reply, int flags)
             throws RemoteException {
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG =  (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityManagerService: onTransact: 0: code: " + code + " data: " + data + " reply: " + reply + " flags: " + flags);  // chun added
+
         if (code == SYSPROPS_TRANSACTION) {
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityManagerService: onTransact: 1");  // chun added
             // We need to tell all apps about the system property change.
             ArrayList<IBinder> procs = new ArrayList<IBinder>();
             synchronized (this) {
@@ -2865,6 +2870,7 @@ public class ActivityManagerService extends IActivityManager.Stub
             }
         }
         try {
+            if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityManagerService: onTransact: 2");  // chun added
             return super.onTransact(code, data, reply, flags);
         } catch (RuntimeException e) {
             // The activity manager only throws certain exceptions intentionally, so let's
@@ -15139,6 +15145,10 @@ public class ActivityManagerService extends IActivityManager.Stub
     public int bindService(IApplicationThread caller, IBinder token, Intent service,
             String resolvedType, IServiceConnection connection, int flags,
             String callingPackage, int userId) throws TransactionTooLargeException {
+        int MY_UID = Binder.getCallingUid();  // chun added
+        boolean MY_FLAG = (MY_UID == 10135 || MY_UID == 10136);  // chun added
+        if (MY_FLAG) Log.d(MY_TAG, "UID: " + MY_UID + " ActivityManagerService: bindService: called");  // chun added
+
         return bindIsolatedService(caller, token, service, resolvedType, connection, flags,
                 null, callingPackage, userId);
     }

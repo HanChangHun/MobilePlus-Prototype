@@ -1854,7 +1854,7 @@ class ContextImpl extends Context {
             int res = ActivityManager.getService().bindIsolatedService(
                 mMainThread.getApplicationThread(), getActivityToken(), service,
                 service.resolveTypeIfNeeded(getContentResolver()),
-                sd, flags, instanceName, getOpPackageName(), user.getIdentifier());  // chun: bindIsolatedService, mMainThread... 
+                sd, flags, instanceName, getOpPackageName(), user.getIdentifier());  // chun: bindIsolatedService, mMainThread...
             if (MY_FLAG) Log.d(MY_TAG,"UID: " + MY_UID  + " ContextImpl: bindServiceCommon: 5: res: " + res);  // chun added
             if (res < 0) {
                 throw new SecurityException(

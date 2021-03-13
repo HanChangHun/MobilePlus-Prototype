@@ -578,7 +578,7 @@ public final class BinderProxy implements IBinder {
      * Native implementation of transact() for proxies
      */
     public native boolean transactNative(int code, Parcel data, Parcel reply,
-            int flags) throws RemoteException;
+            int flags) throws RemoteException; // transactNative
     /**
      * See {@link IBinder#linkToDeath(DeathRecipient, int)}
      */
